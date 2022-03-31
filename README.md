@@ -1,37 +1,14 @@
-# Jet Albano (my-website)
+# Get to know me!
 
-Jet's personal website
+My personal website, showcasing my experiences as a programmer/developer. Also contains information of me, as a person --- _hobbies_, _favorite snacks_ and more!
 
-## Install the dependencies
+This is still under development, so, stay tuned for updates! 👀
 
-```bash
-npm install
-```
+À bientôt!
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+Sa uulitin!
 
-```bash
-quasar dev
-```
+See you soon!
 
-### Lint the files
+😁 🇵🇭 🇫🇷
 
-```bash
-npm run lint
-```
-
-### Format the files
-
-```bash
-npm run format
-```
-
-### Build the app for production
-
-```bash
-quasar build
-```
-
-### Customize the configuration
-
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
