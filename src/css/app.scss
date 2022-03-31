@@ -1,0 +1,69 @@
+// SCROLLS
+// TODO: default = light, hover = dark, click = darker
+
+::-webkit-scrollbar { 
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: $grey-5; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $grey-7;
+}
+::-webkit-scrollbar-thumb:active {
+  background: $grey-8;
+}
+
+// FONTS
+
+@font-face {
+  font-family: SFUID-Black;
+  src: url('../assets/fonts/SF-UI-Display-Black.otf');
+}
+@font-face {
+  font-family: SFUID-Bold;
+  src: url('../assets/fonts/SF-UI-Display-Bold.otf');
+}
+@font-face {
+  font-family: SFUID-Regular;
+  src: url('../assets/fonts/SF-UI-Display-Regular.otf');
+}
+
+body {
+  font-family: 'SFUID-Regular', sans-serif;
+}
+.font-sfuid-black {
+  font-family: 'SFUID-Black', sans-serif;
+}
+.font-sfuid-bold {
+  font-family: 'SFUID-Bold', sans-serif;
+}
+.font-sfuid-regular {
+  font-family: 'SFUID-Regular', sans-serif;
+}
+
+// BACKGROUND COLORS
+
+.bg-navy-blue {
+  background-color: $navy-blue !important;
+}
+
+// TEXT COLORS
+
+.text-grad-mint-blue-dark {
+  background: -webkit-linear-gradient(-70deg, $mint 10%, $blue 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+.text-faded-grey {
+  color: $faded-grey;
+}
+
+// DEV TESTING CSS
+
+.b1 {
+  border: 2px solid $blue-5;
+}
