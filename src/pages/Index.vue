@@ -1,11 +1,12 @@
 <template>
   <q-page>
+    <!-- TODO: kiwi with pilot attire for background -->
     <div id="intro" class="row bg-navy-blue">
-      <!-- TODO: kiwi with pilot attire for background -->
       <div class="col">
         <q-intersection
           transition="slide-down"
           :transition-duration="1000"
+          once
         >
           <div class="row flex-center">
             <h6 class="text-white q-mb-none">
@@ -17,9 +18,10 @@
         <q-intersection
           transition="scale"
           :transition-duration="2000"
+          once
         >
           <div class="row flex-center">
-            <h2 class="text-center q-mt-none q-mb-md font-sfuid-black text-uppercase text-grad-mint-blue-dark">
+            <h2 class="text-center q-mt-none q-mb-md font-sfuid-black text-uppercase text-grad-mint-blue">
               Jethro Albano
             </h2>
           </div>
@@ -31,7 +33,9 @@
         />
 
         <div class="row flex-center text-center">
-          <h4 id="intro-subtext" class="q-mt-none text-white q-px-lg"></h4>
+          <h4 id="intro-subtext" class="q-mt-none text-white q-px-lg">
+            &nbsp; <!-- filler only, before animation kicks in -->
+          </h4>
         </div>
       </div>
     </div>
@@ -54,31 +58,35 @@ export default {
       let i = 0;
 
       const type = () => {
-        const subtext = 'Like birds, not all jets fly. Some are software devs.';
+        const subtext = 'Like birds, not all jets fly. Some code.';
+
         if (i < subtext.length) {
           const introSubtext = document.getElementById('intro-subtext')
 
           // appended span tag per character instead of per phrase ...
           // ... because typing animation shows char 1 by 1, thus, span class does not take effect on previous chars before the end tag
           // ... since they are already shown on screen before the ending span tag is appended
-          if ((i >= 12 && i <= 28) || i >= 39) {
+          if ((i >= 12 && i <= 28) || i >= 35) {
             introSubtext.innerHTML += '<span class="text-faded-grey">' + subtext.charAt(i) + '</span>';
           } else {
-            introSubtext.innerHTML += subtext.charAt(i);
+            if (i === 0) {
+              // remove space
+              introSubtext.innerHTML = subtext.charAt(i);
+            } else {
+              introSubtext.innerHTML += subtext.charAt(i);
+            }
           }
 
           if (i === 28) {
             // added pause after first sentence (better user experience)
-            setTimeout(type, 1000);
+            setTimeout(type, 800);
           } else {
             setTimeout(type, this.typeSpeed);
           }
           i++;
         }
       }
-      setTimeout(() => {
-        type()
-      }, 1500)
+      setTimeout(type, 1500)
     }
   }
 };

@@ -1,14 +1,13 @@
-# Get to know me!
+# Jet's Site
 
-My personal website, showcasing my experiences as a programmer/developer. Also contains information of me, as a person --- _hobbies_, _favorite snacks_ and more!
+[link here soon](https://github.com/Jetszxcki/my-website)
 
-This is still under development, so, stay tuned for updates! 👀
+My personal website, showcasing my experiences as a programmer/developer. Also contains information of me, as a person --- `hobbies`, `favorite snacks` and more!
 
-À bientôt!
+This is still under development, so, stay tuned for updates! 
 
-Sa uulitin!
+**À bientôt!**
 
-See you soon!
+**Sa uulitin!**
 
-😁 🇵🇭 🇫🇷
-
+**See you soon!** ~~ 😁 🇵🇭 🇫🇷

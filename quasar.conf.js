@@ -84,7 +84,6 @@ module.exports = configure(function (ctx) {
       config: {
         notify: {
           position: 'bottom',
-          multiLine: true
         }
       },
 

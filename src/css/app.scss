@@ -1,18 +1,23 @@
+// TAGS
+
+body {
+  font-family: 'SFUID-Regular', sans-serif;
+  color: $navy-blue;
+}
+
 // SCROLLS
-// TODO: default = light, hover = dark, click = darker
 
 ::-webkit-scrollbar { 
   width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: $grey-5; 
-  border-radius: 10px;
+  background: -webkit-linear-gradient(-70deg, $green 10%, $blue 100%);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: $grey-7;
+  background: -webkit-linear-gradient(-70deg, $green-7 10%, $blue-8 100%);
 }
 ::-webkit-scrollbar-thumb:active {
-  background: $grey-8;
+  background: -webkit-linear-gradient(-70deg, $green-8 10%, $blue-9 100%);
 }
 
 // FONTS
@@ -29,10 +34,6 @@
   font-family: SFUID-Regular;
   src: url('../assets/fonts/SF-UI-Display-Regular.otf');
 }
-
-body {
-  font-family: 'SFUID-Regular', sans-serif;
-}
 .font-sfuid-black {
   font-family: 'SFUID-Black', sans-serif;
 }
@@ -48,11 +49,14 @@ body {
 .bg-navy-blue {
   background-color: $navy-blue !important;
 }
+.bg-faded-grey {
+  background: $faded-grey;
+}
 
 // TEXT COLORS
 
-.text-grad-mint-blue-dark {
-  background: -webkit-linear-gradient(-70deg, $mint 10%, $blue 100%);
+.text-grad-mint-blue {
+  background: -webkit-linear-gradient(-70deg, $mint 10%, $blue-9 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,9 +65,12 @@ body {
 .text-faded-grey {
   color: $faded-grey;
 }
+.text-navy-blue {
+  color: $navy-blue;
+}
 
-// DEV TESTING CSS
+// DEV TESTING CSS (for layouts, dimensions, margins, paddings testing)
 
 .b1 {
-  border: 2px solid $blue-5;
+  border: 2px solid $blue;
 }
