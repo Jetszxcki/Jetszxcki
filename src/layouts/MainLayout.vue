@@ -9,7 +9,11 @@
           size="lg"
           flat
           dense
-        />
+        >
+          <q-tooltip class="text-body1 bg-faded-grey text-navy-blue">
+            Home
+          </q-tooltip>
+        </q-btn>
         <q-btn
           v-for="contact, index of contacts"
           :key="index"
@@ -19,7 +23,11 @@
           size="lg"
           flat
           dense
-        />
+        >
+          <q-tooltip class="text-body1 bg-faded-grey text-navy-blue">
+            {{ contact.name }}
+          </q-tooltip>
+        </q-btn>
       </q-toolbar>
     </q-header>
 
@@ -35,7 +43,7 @@
         <q-btn
           fab
           icon="mdi-chevron-up"
-          color="black"
+          color="blue"
         />
       </q-page-scroller>
     </q-page-container>
@@ -52,22 +60,27 @@ export default {
     return {
       contacts: [
         {
+          name: 'Twitter',
           icon: 'mdi-twitter',
           url: 'https://twitter.com/jetszxcki',
         },
         {
+          name: 'Facebook',
           icon: 'mdi-facebook',
           url: 'https://www.facebook.com/jetszxcki',
         },
         {
+          name: 'Gmail',
           icon: 'mdi-gmail',
           url: 'skyjeth1371120@gmail.com',
         },
         {
+          name: 'Github',
           icon: 'mdi-github',
           url: 'https://github.com/Jetszxcki',
         },
         {
+          name: 'Linkedin',
           icon: 'mdi-linkedin',
           url: 'https://www.linkedin.com/in/jethro-albano-471219191/',
         },
@@ -81,16 +94,18 @@ export default {
         copyToClipboard(contact.url)
           .then(() => {
             this.$q.notify({
-              message: 'Copied to clipboard',
+              message: 'Copied!',
               icon: 'mdi-clipboard-check',
-              color: 'green'
+              color: 'green-9',
+              classes: 'text-weight-bold',
             })
           })
           .catch(() => {
             this.$q.notify({
               message: 'Can\'t copy to clipboard',
               icon: 'mdi-clipboard-off',
-              color: 'red'
+              color: 'red-9',
+              classes: 'text-weight-bold',
             })
           })
       } else {
