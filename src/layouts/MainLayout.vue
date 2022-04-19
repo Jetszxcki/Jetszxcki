@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header reveal class="bg-navy-blue">
+    <q-header class="bg-navy-blue">
       <q-toolbar class="flex flex-center">
         <q-btn
           @click="smoothScrollTo('intro')"
@@ -10,7 +10,7 @@
           flat
           dense
         >
-          <q-tooltip class="text-body1 bg-faded-grey text-navy-blue">
+          <q-tooltip class="text-body1 bg-navy-blue-1 text-white">
             Home
           </q-tooltip>
         </q-btn>
@@ -24,7 +24,7 @@
           flat
           dense
         >
-          <q-tooltip class="text-body1 bg-faded-grey text-navy-blue">
+          <q-tooltip class="text-body1 bg-navy-blue-1 text-white">
             {{ contact.name }}
           </q-tooltip>
         </q-btn>
@@ -43,7 +43,7 @@
         <q-btn
           fab
           icon="mdi-chevron-up"
-          color="blue"
+          color="blue-9"
         />
       </q-page-scroller>
     </q-page-container>
@@ -96,7 +96,7 @@ export default {
             this.$q.notify({
               message: 'Copied!',
               icon: 'mdi-clipboard-check',
-              color: 'green-9',
+              color: 'green',
               classes: 'text-weight-bold',
             })
           })
@@ -104,7 +104,7 @@ export default {
             this.$q.notify({
               message: 'Can\'t copy to clipboard',
               icon: 'mdi-clipboard-off',
-              color: 'red-9',
+              color: 'red',
               classes: 'text-weight-bold',
             })
           })

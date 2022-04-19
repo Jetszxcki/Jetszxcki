@@ -1,27 +1,45 @@
 <template>
-  <div
-    class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center"
-  >
-    <div>
-      <div style="font-size: 30vh">404</div>
+  <Container style="height: 100vh">
+    <div class="row flex-center">
+      <q-intersection transition="slide-down" :transition-duration="1000" once>
+        <h1 class="q-mr-xs">4</h1>
+      </q-intersection>
 
-      <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
+      <q-intersection transition="fade" :transition-duration="3000" once>
+        <q-btn
+          @click="$router.go(-1)"
+          color="dark"
+          text-color="white"
+          icon="mdi-crosshairs-gps"
+          size="xl"
+          push
+          round
+        />
+      </q-intersection>
 
-      <q-btn
-        class="q-mt-xl"
-        color="white"
-        text-color="blue"
-        unelevated
-        to="/"
-        label="Go Home"
-        no-caps
-      />
+      <q-intersection transition="slide-up" :transition-duration="1000" once>
+        <h1>4</h1>
+      </q-intersection>
+
     </div>
-  </div>
+
+    <div class="row flex-center mt-n-60">
+      <q-intersection transition="slide-down" :transition-duration="2000" once>
+        <h6 class="q-my-none q-ml-md">
+          Nothing here
+        </h6>
+      </q-intersection>
+    </div>
+  </Container>
 </template>
 
 <script>
+import Container from 'components/Container'
+
 export default {
   name: "Error404",
-};
+  components: {
+    Container,
+  }
+}
 </script>

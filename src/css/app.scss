@@ -1,8 +1,17 @@
 // TAGS
 
 body {
-  font-family: 'SFUID-Regular', sans-serif;
-  color: $navy-blue;
+  font-family: 'Balsamiq Sans';
+  color: $dark;
+}
+a {
+  text-decoration: none;
+  color: $blue-9
+}
+h1, h2 {
+  font-family: 'Pangolin';
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 // SCROLLS
@@ -11,46 +20,74 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: -webkit-linear-gradient(-70deg, $green 10%, $blue 100%);
+  background: -webkit-linear-gradient(
+    -70deg,
+    white 0%,
+    $mint 10%,
+    $blue 90%,
+    white 100%
+  );
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: -webkit-linear-gradient(-70deg, $green-7 10%, $blue-8 100%);
-}
+  background: -webkit-linear-gradient(
+    -70deg,
+    white 0%,
+    $mint-1 10%,
+    $blue-8 90%,
+    white 100%
+    );
+  }
 ::-webkit-scrollbar-thumb:active {
-  background: -webkit-linear-gradient(-70deg, $green-8 10%, $blue-9 100%);
+  background: -webkit-linear-gradient(
+    -70deg,
+    white 0%,
+    $mint-2 10%,
+    $blue-9 90%,
+    white 100%
+  );
 }
 
 // FONTS
 
 @font-face {
-  font-family: SFUID-Black;
-  src: url('../assets/fonts/SF-UI-Display-Black.otf');
+  font-family: Pangolin;
+  src: url('../assets/fonts/Pangolin-Regular.ttf');
 }
 @font-face {
-  font-family: SFUID-Bold;
-  src: url('../assets/fonts/SF-UI-Display-Bold.otf');
+  font-family: Jua;
+  src: url('../assets/fonts/Jua-Regular.ttf');
 }
 @font-face {
-  font-family: SFUID-Regular;
-  src: url('../assets/fonts/SF-UI-Display-Regular.otf');
+  font-family: Balsamiq Sans;
+  src: url('../assets/fonts/BalsamiqSans-Regular.ttf');
 }
-.font-sfuid-black {
-  font-family: 'SFUID-Black', sans-serif;
+
+.font-balsamiq-sans {
+  font-family: 'Balsamiq Sans';
 }
-.font-sfuid-bold {
-  font-family: 'SFUID-Bold', sans-serif;
+.font-pangolin {
+  font-family: 'Pangolin';
 }
-.font-sfuid-regular {
-  font-family: 'SFUID-Regular', sans-serif;
+.font-jua {
+  font-family: 'Jua';
 }
+
 
 // BACKGROUND COLORS
 
 .bg-navy-blue {
   background-color: $navy-blue !important;
 }
-.bg-faded-grey {
-  background: $faded-grey;
+.bg-navy-blue-1 {
+  background-color: $navy-blue-1 !important;
+}
+.bg-grad-navy-blue {
+  background: linear-gradient(
+    $navy-blue,
+    $navy-blue-1,
+    $navy-blue-1,
+    $navy-blue
+  );
 }
 
 // TEXT COLORS
@@ -62,15 +99,118 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;
 }
-.text-faded-grey {
-  color: $faded-grey;
+.text-grad-magenta-blue {
+  background: -webkit-linear-gradient(-70deg, $magenta 10%, $blue-9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
 }
-.text-navy-blue {
-  color: $navy-blue;
+.text-faded-grey-1 {
+  color: $faded-grey-1 !important;
+}
+.text-faded-grey-2 {
+  color: $faded-grey-2 !important;
 }
 
-// DEV TESTING CSS (for layouts, dimensions, margins, paddings testing)
+// BORDERS
 
-.b1 {
-  border: 2px solid $blue;
+.br-30 {
+  border-radius: 30px;
+}
+.br-10-p {
+  border-radius: 10%;
+}
+.br-50-p {
+  border-radius: 50%;
+}
+.br-l-30 {
+  border-top-left-radius: 30px !important;
+  border-bottom-left-radius: 30px !important;
+}
+.br-r-30 {
+  border-top-right-radius: 30px !important;
+  border-bottom-right-radius: 30px !important;
+}
+.br-t-30 {
+  border-top-left-radius: 30px !important;
+  border-top-right-radius: 30px !important;
+}
+.br-b-30 {
+  border-bottom-left-radius: 30px !important;
+  border-bottom-right-radius: 30px !important;
+}
+.br-tl-24 {
+  border-top-left-radius: 24px !important;
+}
+
+// SHADOWS
+
+.light-blue-shadow {
+  box-shadow: 0px 20px 80px -30px $blue;
+}
+
+// TRANSFORMS
+
+.rotate-350 {
+  transform: rotate(350deg);
+}
+.rotate-10 {
+  transform: rotate(10deg);
+}
+
+// WRAPS
+
+.hyphen-word-wrap {
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+// MARGINS, PADDINGS
+
+.mt-n-60 {
+  margin-top: -60px;
+}
+
+// DIMENSIONS (HEIGHT, WIDTH)
+
+.h-11 {
+  height: 11%;
+}
+.h-12 {
+  height: 12%;
+}
+.h-33 {
+  height: 33%;
+}
+.h-34 {
+  height: 34%;
+}
+.h-50 {
+  height: 50%;
+}
+
+// COMPONENT-SPECIFIC
+
+.flag {
+  min-width: 320px;
+  min-height: 210px;
+  border-radius: 30px;
+}
+
+// DEV TESTING CSS (borders for testing layouts, dimensions, margins, paddings testing)
+
+.b3-blue {
+  border: 3px solid $blue;
+}
+.b3-red {
+  border: 3px solid $red;
+}
+.b3-orange {
+  border: 3px solid $orange;
+}
+.b3-green {
+  border: 3px solid $green;
 }
