@@ -5,12 +5,12 @@
         <q-btn
           @click="smoothScrollTo('intro')"
           icon="mdi-home"
-          text-color="white"
           size="lg"
+          text-color="mint-1"
           flat
           dense
         >
-          <q-tooltip class="text-body1 bg-navy-blue-1 text-white">
+          <q-tooltip class="text-body1 bg-grad-mint text-navy-blue shadow-5 font-pangolin">
             Home
           </q-tooltip>
         </q-btn>
@@ -19,12 +19,12 @@
           :key="index"
           :icon="contact.icon"
           @click="openContact(contact)"
-          text-color="white"
           size="lg"
+          text-color="white"
           flat
           dense
         >
-          <q-tooltip class="text-body1 bg-navy-blue-1 text-white">
+          <q-tooltip class="text-body1 bg-grad-mint text-navy-blue shadow-5 font-pangolin">
             {{ contact.name }}
           </q-tooltip>
         </q-btn>
@@ -43,7 +43,9 @@
         <q-btn
           fab
           icon="mdi-chevron-up"
-          color="blue-9"
+          color="grad-mint"
+          text-color="navy-blue"
+          class="shadow-10"
         />
       </q-page-scroller>
     </q-page-container>
@@ -51,7 +53,8 @@
 </template>
 
 <script>
-import { copyToClipboard, scroll } from 'quasar'
+import { copy } from '../utils/funcs.js'
+import { scroll } from 'quasar'
 
 export default {
   name: "MainLayout",
@@ -84,6 +87,11 @@ export default {
           icon: 'mdi-linkedin',
           url: 'https://www.linkedin.com/in/jethro-albano-471219191/',
         },
+        {
+          name: 'Resume',
+          icon: 'mdi-newspaper-variant',
+          url: 'https://drive.google.com/file/d/1I8UjDpSDRSRPotAMnJ4eHADd0edQFsLJ/view?usp=sharing',
+        },
       ]
     }
   },
@@ -91,28 +99,11 @@ export default {
   methods: {
     openContact (contact) {
       if (contact.icon === 'mdi-gmail') {
-        copyToClipboard(contact.url)
-          .then(() => {
-            this.$q.notify({
-              message: 'Copied!',
-              icon: 'mdi-clipboard-check',
-              color: 'green',
-              classes: 'text-weight-bold',
-            })
-          })
-          .catch(() => {
-            this.$q.notify({
-              message: 'Can\'t copy to clipboard',
-              icon: 'mdi-clipboard-off',
-              color: 'red',
-              classes: 'text-weight-bold',
-            })
-          })
+        copy(contact.url)
       } else {
         window.open(contact.url, '_blank')
       }
     },
-
     smoothScrollTo (id) {
       const { getScrollTarget, setVerticalScrollPosition } = scroll
       const el = document.getElementById(id)
