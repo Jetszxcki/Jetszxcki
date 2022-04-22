@@ -1,30 +1,30 @@
 // TAGS
 
 body {
-  font-family: 'Balsamiq Sans';
-  color: $dark;
+  font-family: 'Quicksand';
+  color: $navy-blue;
 }
 a {
   text-decoration: none;
   color: $blue-9
 }
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Pangolin';
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 // SCROLLS
 
 ::-webkit-scrollbar { 
-  width: 10px;
+  width: 15px;
 }
 ::-webkit-scrollbar-thumb {
   background: -webkit-linear-gradient(
     -70deg,
     white 0%,
     $mint 10%,
-    $blue 90%,
+    $mint-1 90%,
     white 100%
   );
 }
@@ -32,8 +32,9 @@ h1, h2 {
   background: -webkit-linear-gradient(
     -70deg,
     white 0%,
-    $mint-1 10%,
-    $blue-8 90%,
+    $mint 10%,
+    $mint-1 50%,
+    $mint-2 90%,
     white 100%
     );
   }
@@ -42,7 +43,7 @@ h1, h2 {
     -70deg,
     white 0%,
     $mint-2 10%,
-    $blue-9 90%,
+    $green 90%,
     white 100%
   );
 }
@@ -54,24 +55,27 @@ h1, h2 {
   src: url('../assets/fonts/Pangolin-Regular.ttf');
 }
 @font-face {
-  font-family: Jua;
-  src: url('../assets/fonts/Jua-Regular.ttf');
+  font-family: Rampart One;
+  src: url('../assets/fonts/RampartOne-Regular.ttf');
 }
 @font-face {
-  font-family: Balsamiq Sans;
-  src: url('../assets/fonts/BalsamiqSans-Regular.ttf');
+  font-family: Syne Mono;
+  src: url('../assets/fonts/SyneMono-Regular.ttf');
+}
+@font-face {
+  font-family: Quicksand;
+  src: url('../assets/fonts/Quicksand.ttf');
 }
 
-.font-balsamiq-sans {
-  font-family: 'Balsamiq Sans';
+.font-rampart-one {
+  font-family: 'Rampart One';
+}
+.font-syne-mono {
+  font-family: 'Syne Mono';
 }
 .font-pangolin {
   font-family: 'Pangolin';
 }
-.font-jua {
-  font-family: 'Jua';
-}
-
 
 // BACKGROUND COLORS
 
@@ -81,6 +85,12 @@ h1, h2 {
 .bg-navy-blue-1 {
   background-color: $navy-blue-1 !important;
 }
+.bg-mint {
+  background-color: $mint !important;
+}
+.bg-mint-1 {
+  background-color: $mint-1 !important;
+}
 .bg-grad-navy-blue {
   background: linear-gradient(
     $navy-blue,
@@ -89,18 +99,53 @@ h1, h2 {
     $navy-blue
   );
 }
+.bg-grad-navy-blue-up {
+  background: linear-gradient(
+    to top,
+    $navy-blue,
+    $dark
+  );
+}
+.bg-grad-blue {
+  background: linear-gradient(
+    315deg,
+    $blue-4,
+    $blue
+  );
+}
+.bg-grad-yellow {
+  background: linear-gradient(
+    315deg,
+    $yellow-3,
+    $yellow-7
+  );
+}
+.bg-grad-red {
+  background: linear-gradient(
+    315deg,
+    $red-5,
+    $red-3
+  );
+}
+.bg-grad-mint {
+  background: linear-gradient(
+    315deg,
+    $mint-1,
+    $mint,
+  );
+}
 
 // TEXT COLORS
 
-.text-grad-mint-blue {
-  background: -webkit-linear-gradient(-70deg, $mint 10%, $blue-9 100%);
+.text-grad-mint {
+  background: -webkit-linear-gradient(-70deg, $mint 10%, $mint-2 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;
 }
-.text-grad-magenta-blue {
-  background: -webkit-linear-gradient(-70deg, $magenta 10%, $blue-9 100%);
+.text-grad-dark-mint {
+  background: -webkit-linear-gradient(-70deg, $green-4 10%, $mint 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -112,9 +157,32 @@ h1, h2 {
 .text-faded-grey-2 {
   color: $faded-grey-2 !important;
 }
+.text-navy-blue {
+  color: $navy-blue !important;
+}
+.text-mint {
+  color: $mint !important;
+}
+.text-mint-1 {
+  color: $mint-1 !important;
+}
+
+// TRANSITIONS/ANIMATIONS
+
+.transition-up-20 {
+  top: 0;
+  position: relative;
+  transition: top ease 0.5s;
+}
+.transition-up-20:hover {
+  top: -20px;
+}
 
 // BORDERS
 
+.br-10 {
+  border-radius: 10px;
+}
 .br-30 {
   border-radius: 30px;
 }
@@ -148,6 +216,9 @@ h1, h2 {
 
 .light-blue-shadow {
   box-shadow: 0px 20px 80px -30px $blue;
+}
+.light-blue-shadow-up {
+  box-shadow: 0px -40px 80px -30px $blue;
 }
 
 // TRANSFORMS

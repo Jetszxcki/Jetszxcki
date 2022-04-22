@@ -6,7 +6,7 @@
           @click="smoothScrollTo('intro')"
           icon="mdi-home"
           size="lg"
-          text-color="mint-1"
+          text-color="mint"
           flat
           dense
         >

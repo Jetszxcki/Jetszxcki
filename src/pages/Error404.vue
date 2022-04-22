@@ -25,7 +25,7 @@
 
     <div class="row flex-center mt-n-60">
       <q-intersection transition="slide-down" :transition-duration="2000" once>
-        <h6 class="q-my-none q-ml-md">
+        <h6 class="q-my-none q-ml-md font-pangolin">
           Nothing here
         </h6>
       </q-intersection>
