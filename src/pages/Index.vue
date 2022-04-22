@@ -1,9 +1,9 @@
 <!-- TODO:
-  = image of airport tower on top of svg 
-  = add transitions
+  = add missing images
   = USA flag has a weird white below at same dimensions
   = github image showing white border
   = add overlay text on mgmt tools and languages
+  = update time related content every month
 -->
 <template>
   <q-page class="q-pb-xl">
@@ -51,21 +51,26 @@
         <div class="col-12 col-md-6 q-pb-xl flex flex-center">
         </div>
         <div class="col-12 col-md-6 q-pb-xl">
-          <h2 class="q-mb-none text-grad-dark-mint">An Aircraft on Foot</h2>
-          <h5 class="text-faded-grey-1">
-            <span class="text-navy-blue">Is it a bird, is it a plane? --- No, it's a Jet!</span>
-            <br>
+          <q-intersection transition="slide-down" :transition-duration="1000" once>
+            <h2 class="q-mb-none text-grad-dark-mint">An Aircraft on Foot</h2>
+          </q-intersection>
 
-            Hi! I'm an average-sized aircraft currently stationed in the Philippines.
-            Incapable of flight, I create apps and programs as a software developer,
-            and currently works in a crypto-oriented company,
+          <q-intersection transition="slide-up" :transition-duration="1000" once>
+            <h5 class="text-faded-grey-1">
+              <span class="text-navy-blue">Is it a bird, is it a plane? --- No, it's a Jet!</span>
+              <br>
 
-            <a href="https://scibizinformatics.com/#/about" target="_blank">
-              Scibiz Informatics,
-            </a>
+              Hi! I'm an average-sized aircraft currently stationed in the Philippines.
+              Incapable of flight, I create apps and programs as a software developer,
+              and currently works in a crypto-oriented company,
 
-            for almost 3 years now.
-          </h5>
+              <a href="https://scibizinformatics.com/#/about" target="_blank">
+                Scibiz Informatics,
+              </a>
+
+              for almost 3 years now.
+            </h5>
+          </q-intersection>
         </div>
       </div>
     </Container>
@@ -81,19 +86,27 @@
           </h4>
           <h5 class="text-white q-mb-none q-mt-md">
             Having it heard from a video game, the French accent sparked my interest towards language learning.
-            Currently at my 6th month of study, I can fairly speak and understand French,
+            Currently at my 7th month of study, I can fairly speak and understand French,
             and a little bit of Russian.
           </h5>
         </div>
 
         <div class="col-12 col-md-7">
           <div class="row h-50 justify-evenly">
-            <Philippines class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
-            <USA class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
+            <q-intersection transition="scale" :transition-duration="1000" once>
+              <Philippines class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
+            </q-intersection>
+            <q-intersection transition="scale" :transition-duration="2000" once>
+              <USA class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
+            </q-intersection>
           </div>
           <div class="row h-50 justify-evenly">
-            <France class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
-            <Russia class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
+            <q-intersection transition="scale" :transition-duration="3000" once>
+              <France class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
+            </q-intersection>
+            <q-intersection transition="scale" :transition-duration="4000" once>
+              <Russia class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
+            </q-intersection>
           </div>
         </div>
       </div>
@@ -101,19 +114,26 @@
       <div class="row q-pt-xl reverse-wrap justify-evenly">
         <div class="col-12 col-md-7 flex flex-center q-pa-md">
           <div class="row q-gutter-md flex-center">
-            <q-btn
-              push
-              no-caps
-              size="xl"
-              color="navy-blue-1"
-              class="col-xs-12 col-sm-auto font-pangolin"
+            <q-intersection
               v-for="pl in progLangs"
               :key="pl.name"
+              :transition="pl.transition.style"
+              :transition-duration="pl.transition.duration"
               :class="pl.classes"
-              :text-color="pl.textColor"
-              :label="pl.name"
-              :icon="`img:logos/${pl.icon}`"
-            />
+              class="col-xs-12 col-sm-auto"
+              once
+            >
+              <q-btn
+                push
+                no-caps
+                size="xl"
+                color="navy-blue-1"
+                class="font-pangolin full-width"
+                :text-color="pl.textColor"
+                :label="pl.name"
+                :icon="`img:logos/${pl.icon}`"
+              />
+            </q-intersection>
           </div>
         </div>
         <div class="col-12 col-md-4 q-pb-lg flex flex-center">
@@ -144,13 +164,15 @@
       
       <div class="row q-px-xl">
         <div class="col-12 col-md-5">
-          <h5 class="q-pr-lg text-faded-grey-2">
-            Unlike other planes, I am fueled by fries and mango shake.
+          <q-intersection transition="slide-down" :transition-duration="1000" once>
+            <h5 class="q-pr-lg text-faded-grey-2">
+              Unlike other planes, I am fueled by fries and mango shake.
 
-            <span class="text-white">
-              As a clean and organized jet, I like to keep things clean, tidy and organized.
-            </span>
-          </h5>
+              <span class="text-white">
+                As a clean and organized jet, I like to keep things clean, tidy and organized.
+              </span>
+            </h5>
+          </q-intersection>
         </div>
 
         <div class="col-12 col-md-7">
@@ -172,16 +194,21 @@
         </div>
 
         <div class="col-12 col-md-6 q-pt-xl q-px-xl">
-          <h3 class="q-py-xs hyphen-word-wrap text-faded-grey-2">
-            ''With great codebase, <br>comes great responsibility.''
-          </h3>
-          <h5 class="text-faded-grey-2">
-            Code and task management is key to smooth progress.
-            <span class="text-white">
-              Among these are tools that I've used for task organization,
-              team communication and code safety.
-            </span>
-          </h5>
+          <q-intersection transition="slide-down" :transition-duration="1000" once>
+            <h3 class="q-py-xs hyphen-word-wrap text-faded-grey-2">
+              ''With great codebase, <br>comes great responsibility.''
+            </h3>
+          </q-intersection>
+
+          <q-intersection transition="slide-up" :transition-duration="1000" once>
+            <h5 class="text-faded-grey-2">
+              Code and task management is key to smooth progress.
+              <span class="text-white">
+                Among these are tools that I've used for task organization,
+                team communication and code safety.
+              </span>
+            </h5>
+            </q-intersection>
         </div>
       </div>
     </Container>
@@ -189,13 +216,16 @@
     <Container id="the-artist" container-class="q-py-xl">
       <div class="text-center">
         <h2 class="q-px-xl text-grad-dark-mint">The Artist</h2>
-        <h5 class="q-px-xl">
-          Unable to fly, I can't use my creativity on combat.
-          <br>
-          <span class="text-faded-grey-1">
+        <q-intersection transition="jump-right" :transition-duration="3000" once>
+          <h5 class="q-px-xl q-mb-none">
+            Unable to fly, I can't use my creativity on combat.
+          </h5>
+        </q-intersection>
+        <q-intersection transition="jump-left" :transition-duration="3000" once>
+          <h5 class="text-faded-grey-1 q-mt-none">
             Instead, I diverted my imagination on arts.
-          </span>
-        </h5>
+          </h5>
+        </q-intersection>
       </div>
 
       <div class="row flex-center q-mb-lg">
@@ -213,13 +243,16 @@
             ''Softwares are art too.''
           </h3>
 
-          <h5>
-            <span class="text-faded-grey-1">
+          <q-intersection transition="jump-right" :transition-duration="3000" once>
+            <h5 class="q-mb-none">
               Just like in art, there is also design in data and interfaces.
-            </span>
-            <br>
-            Here are some projects I mainly contributed to:
-          </h5>
+            </h5>
+          </q-intersection>
+          <q-intersection transition="jump-left" :transition-duration="3000" once>
+            <h5 class="text-faded-grey-1 q-mt-none">
+              Here are some projects I mainly contributed to:
+            </h5>
+          </q-intersection>
         </div>
       </div>
 
@@ -302,61 +335,101 @@ export default {
           name: 'Python',
           icon: 'python-logo.png',
           textColor: 'yellow',
-          classes: 'col-md-5'
+          classes: 'col-md-5',
+          transition: {
+            style: 'flip-left',
+            duration: 2000
+          }
         },
         {
           name: 'Django',
           icon: 'django-logo.jpg',
           textColor: 'green-7',
-          classes: 'col-md-5'
+          classes: 'col-md-5',
+          transition: {
+            style: 'flip-right',
+            duration: 2000
+          }
         },
         {
           name: 'Quasar',
           icon: 'quasar-logo.png',
           textColor: 'light-blue',
-          classes: 'col-md-4'
+          classes: 'col-md-4',
+          transition: {
+            style: 'flip-right',
+            duration: 2500
+          }
         },
         {
           name: 'Nuxt',
           icon: 'nuxt-logo.svg',
           textColor: 'teal',
-          classes: 'col-md-3'
+          classes: 'col-md-3',
+          transition: {
+            style: 'flip-down',
+            duration: 2000
+          }
         },
         {
           name: 'Vue',
           icon: 'vue-logo.png',
           textColor: 'green-12',
-          classes: 'col-md-4'
+          classes: 'col-md-4',
+          transition: {
+            style: 'flip-left',
+            duration: 5000
+          }
         },
         {
           name: 'Javascript',
           icon: 'js-logo.png',
           textColor: 'yellow',
-          classes: 'col-md-4'
+          classes: 'col-md-4',
+          transition: {
+            style: 'flip-right',
+            duration: 5000
+          }
         },
         {
           name: 'HTML',
           icon: 'html-logo.png',
           textColor: 'orange',
-          classes: 'col-md-3'
+          classes: 'col-md-3',
+          transition: {
+            style: 'flip-up',
+            duration: 4000
+          }
         },
         {
           name: 'CSS',
           icon: 'css-logo.png',
           textColor: 'blue-9',
-          classes: 'col-md-4'
+          classes: 'col-md-4',
+          transition: {
+            style: 'flip-left',
+            duration: 2000
+          }
         },
         {
           name: 'Java SE',
           icon: 'java-logo.png',
           textColor: 'red',
-          classes: 'col-md-4'
+          classes: 'col-md-4',
+          transition: {
+            style: 'flip-left',
+            duration: 3000
+          }
         },
         {
           name: 'C',
           icon: 'c-logo.webp',
           textColor: 'indigo-7',
-          classes: 'col-md-4'
+          classes: 'col-md-4',
+          transition: {
+            style: 'flip-right',
+            duration: 1000
+          }
         },
       ],
       projects: [
