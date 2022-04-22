@@ -55,10 +55,6 @@ h1, h2, h3 {
   src: url('../assets/fonts/Pangolin-Regular.ttf');
 }
 @font-face {
-  font-family: Rampart One;
-  src: url('../assets/fonts/RampartOne-Regular.ttf');
-}
-@font-face {
   font-family: Syne Mono;
   src: url('../assets/fonts/SyneMono-Regular.ttf');
 }
@@ -67,9 +63,6 @@ h1, h2, h3 {
   src: url('../assets/fonts/Quicksand.ttf');
 }
 
-.font-rampart-one {
-  font-family: 'Rampart One';
-}
 .font-syne-mono {
   font-family: 'Syne Mono';
 }
@@ -103,7 +96,9 @@ h1, h2, h3 {
   background: linear-gradient(
     to top,
     $navy-blue,
-    $dark
+    $navy-blue-1,
+    $navy-blue-1,
+    $navy-blue-1
   );
 }
 .bg-grad-blue {

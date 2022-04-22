@@ -1,4 +1,8 @@
-import { copyToClipboard, Notify } from 'quasar'
+import {
+  copyToClipboard,
+  Notify,
+  scroll
+} from 'quasar'
 
 function copy (text) {
   copyToClipboard(text)
@@ -19,4 +23,12 @@ function copy (text) {
     })
 }
 
-export { copy }
+function smoothScrollTo (id, document) {
+  const { getScrollTarget, setVerticalScrollPosition } = scroll
+  const el = document.getElementById(id)
+  const target = getScrollTarget(el)
+  const offset = el.offsetTop
+  setVerticalScrollPosition(target, offset, 500)
+}
+
+export { copy, smoothScrollTo }

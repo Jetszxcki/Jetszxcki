@@ -1,19 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header class="bg-navy-blue">
+    <q-header reveal class="bg-navy-blue">
       <q-toolbar class="flex flex-center">
-        <q-btn
-          @click="smoothScrollTo('intro')"
-          icon="mdi-home"
-          size="lg"
-          text-color="mint"
-          flat
-          dense
-        >
-          <q-tooltip class="text-body1 bg-grad-mint text-navy-blue shadow-5 font-pangolin">
-            Home
-          </q-tooltip>
-        </q-btn>
         <q-btn
           v-for="contact, index of contacts"
           :key="index"
@@ -33,6 +21,7 @@
 
     <q-page-container>
       <router-view />
+      <Footer />
 
       <q-page-scroller
         position="bottom-right"
@@ -53,12 +42,15 @@
 </template>
 
 <script>
+import Footer from 'components/Footer'
+
 import { copy } from '../utils/funcs.js'
-import { scroll } from 'quasar'
 
 export default {
   name: "MainLayout",
-
+  components: {
+    Footer,
+  },
   data () {
     return {
       contacts: [
@@ -95,7 +87,6 @@ export default {
       ]
     }
   },
-
   methods: {
     openContact (contact) {
       if (contact.icon === 'mdi-gmail') {
@@ -103,14 +94,7 @@ export default {
       } else {
         window.open(contact.url, '_blank')
       }
-    },
-    smoothScrollTo (id) {
-      const { getScrollTarget, setVerticalScrollPosition } = scroll
-      const el = document.getElementById(id)
-      const target = getScrollTarget(el)
-      const offset = el.offsetTop
-      setVerticalScrollPosition(target, offset, 500)
     }
   }
-};
+}
 </script>

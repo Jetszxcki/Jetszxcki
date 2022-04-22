@@ -7,7 +7,7 @@
 -->
 <template>
   <q-page class="q-pb-xl">
-    <Container id="intro" class="q-py-xl bg-grad-navy-blue">
+    <Container id="the-jet" class="q-pt-xl bg-grad-navy-blue">
       <q-intersection transition="slide-down" :transition-duration="1000" once>
         <div class="row flex-center">
           <h6 class="text-mint q-mb-none font-pangolin">
@@ -18,7 +18,7 @@
 
       <q-intersection transition="fade" :transition-duration="2000" once>
         <div class="row flex-center">
-          <p class="text-center q-mt-none q-mb-md font-rampart-one q-pb-sm text-grad-mint full-name">
+          <p class="text-center q-mt-none q-mb-md font-pangolin text-weight-bolder q-pb-sm text-grad-mint full-name">
             JETHRO ALBANO
           </p>
         </div>
@@ -38,23 +38,19 @@
       </div>
     </Container>
         
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 220 1440 100"
-      class="bg-navy-blue"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
-        fill="#fff"
+        fill="#030518"
         fill-opacity="1"
-        d="M0,320L120,304C240,288,480,256,720,256C960,256,1200,288,1320,304L1440,320L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+        d="M0,192L80,181.3C160,171,320,149,480,138.7C640,128,800,128,960,138.7C1120,149,1280,171,1360,181.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
       ></path>
     </svg>
 
-    <Container>
-      <div class="row q-px-xl">
-        <div class="col-12 col-md-6 q-pb-xl q-pt-md flex flex-center">
+    <Container id="the-aircraft">
+      <div class="row q-pb-xl">
+        <div class="col-12 col-md-6 q-pb-xl flex flex-center">
         </div>
-        <div class="col-12 col-md-6 q-pb-xl q-pt-md">
+        <div class="col-12 col-md-6 q-pb-xl">
           <h2 class="q-mb-none text-grad-dark-mint">An Aircraft on Foot</h2>
           <h5 class="text-faded-grey-1">
             <span class="text-navy-blue">Is it a bird, is it a plane? --- No, it's a Jet!</span>
@@ -74,7 +70,7 @@
       </div>
     </Container>
 
-    <Container container-class="bg-navy-blue br-t-30 shadow-up-10 q-pa-xl">
+    <Container id="the-polyglot" container-class="bg-navy-blue br-t-30 shadow-up-10 q-pa-xl">
       <div class="row">
         <div class="col-12 col-md-5 q-pr-lg q-pb-lg flex flex-center">
           <h2 class="q-mb-none q-mt-lg q-py-xs text-grad-mint full-width">
@@ -141,7 +137,7 @@
       </div>
     </Container>
 
-    <Container container-class="br-b-30 q-py-xl shadow-10 bg-navy-blue-1">
+    <Container id="the-eco-friendly" container-class="br-b-30 q-py-xl shadow-10 bg-navy-blue-1">
       <h2 class="text-center text-grad-mint q-px-xl q-pb-sm q-mb-md">
         Eco-Friendly Plane
       </h2>
@@ -190,7 +186,7 @@
       </div>
     </Container>
 
-    <Container container-class="q-py-xl">
+    <Container id="the-artist" container-class="q-py-xl">
       <div class="text-center">
         <h2 class="q-px-xl text-grad-dark-mint">The Artist</h2>
         <h5 class="q-px-xl">
@@ -714,7 +710,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .intro-separator {
   width: 250px;
 }
