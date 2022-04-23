@@ -258,24 +258,24 @@ h1, h2, h3 {
   height: 50%;
 }
 
-// COMPONENT-SPECIFIC
+// COMPONENT or EVENT-SPECIFIC
 
 .flag {
   min-width: 320px;
   min-height: 210px;
   border-radius: 30px;
 }
-.flag-label {
+.hover-label {
   color: white;
   text-align: center;
-  font-family: 'Pangolin';
+  font-family: 'Quicksand';
   text-shadow:
-   -4px -4px 0 $navy-blue,  
-    4px -4px 0 $navy-blue,
-    -4px 4px 0 $navy-blue,
-     4px 4px 0 $navy-blue;
+   -3px -3px 0 $navy-blue,  
+    3px -3px 0 $navy-blue,
+    -3px 3px 0 $navy-blue,
+     3px 3px 0 $navy-blue;
 }
-.flag-label-div {
+.hover-label-div {
   background-color: $dark;
   border-radius: 24px;
   opacity: 0.5;

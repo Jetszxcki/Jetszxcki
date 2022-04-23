@@ -5,11 +5,11 @@
     @mouseout="showLabel = false"
   >
     <div
-      class="absolute-center fit flex flex-center flag-label-div"
+      class="absolute-center fit flex flex-center hover-label-div"
       style="z-index: 2"
       v-show="showLabel"
     >
-      <h3 class="flag-label">Tagalog</h3>
+      <h3 class="hover-label">Tagalog</h3>
     </div>
 
     <div id="sun" class="absolute bg-yellow br-50-p"></div>

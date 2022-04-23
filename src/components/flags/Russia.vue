@@ -4,8 +4,8 @@
     @mouseover="showLabel = true"
     @mouseout="showLabel = false"
   >
-    <div class="absolute-center fit flex flex-center flag-label-div" v-show="showLabel">
-      <h3 class="flag-label">Russian</h3>
+    <div class="absolute-center fit flex flex-center hover-label-div" v-show="showLabel">
+      <h3 class="hover-label">Russian</h3>
     </div>
 
     <div class="col">

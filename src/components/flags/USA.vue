@@ -5,8 +5,8 @@
     @mouseout="showLabel = false"
   >
     <div class="col bg-white br-30 relative-position">
-      <div class="absolute-center fit flex flex-center flag-label-div" style="z-index: 1" v-show="showLabel">
-        <h3 class="flag-label">English</h3>
+      <div class="absolute-center fit flex flex-center hover-label-div" style="z-index: 1" v-show="showLabel">
+        <h3 class="hover-label">English</h3>
       </div>
 
       <!--

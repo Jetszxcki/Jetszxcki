@@ -189,7 +189,16 @@
               :class="mgmtTool.class"
               class="max-w-280 light-blue-shadow-up transition-up-20"
               :width="$q.screen.xs ? '200px' : ''"
-            />
+              @mouseover="mgmtTool.showLabel = true"
+              @mouseout="mgmtTool.showLabel = false"
+             >
+              <div
+                v-show="mgmtTool.showLabel"
+                class="br-30 bg-dark absolute-center fit flex flex-center hover-label-div"
+              >
+                <h3 class="hover-label">{{ mgmtTool.name }}</h3>
+              </div>
+             </q-img>
           </div>
         </div>
 
@@ -308,14 +317,20 @@ export default {
         {
           class: 'br-50-p rotate-350 bg-white',
           image: 'github-logo.png',
+          name: 'Github',
+          showLabel: false
         },
         {
           class: 'br-10-p rotate-10',
           image: 'trello-logo.png',
+          name: 'Trello',
+          showLabel: false
         },
         {
           class: 'br-50-p mt-n-60',
           image: 'slack-logo.png',
+          name: 'Slack',
+          showLabel: false
         },
       ],
       progLangsOrigClasses: [
