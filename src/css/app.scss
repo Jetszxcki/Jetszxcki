@@ -265,6 +265,21 @@ h1, h2, h3 {
   min-height: 210px;
   border-radius: 30px;
 }
+.flag-label {
+  color: white;
+  text-align: center;
+  font-family: 'Pangolin';
+  text-shadow:
+   -4px -4px 0 $navy-blue,  
+    4px -4px 0 $navy-blue,
+    -4px 4px 0 $navy-blue,
+     4px 4px 0 $navy-blue;
+}
+.flag-label-div {
+  background-color: $dark;
+  border-radius: 24px;
+  opacity: 0.5;
+}
 
 // DEV TESTING CSS (borders for testing layouts, dimensions, margins, paddings testing)
 

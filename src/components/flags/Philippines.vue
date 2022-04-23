@@ -1,5 +1,17 @@
 <template>
-  <div class="flag row relative-position">
+  <div
+    class="flag row relative-position"
+    @mouseover="showLabel = true"
+    @mouseout="showLabel = false"
+  >
+    <div
+      class="absolute-center fit flex flex-center flag-label-div"
+      style="z-index: 2"
+      v-show="showLabel"
+    >
+      <h3 class="flag-label">Tagalog</h3>
+    </div>
+
     <div id="sun" class="absolute bg-yellow br-50-p"></div>
     <q-icon
       v-for="i in 3"
@@ -21,6 +33,17 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      showLabel: false
+    }
+  }
+}
+</script>
+
 
 <style scoped lang="scss">
 #triangle-left {

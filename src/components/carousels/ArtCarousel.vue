@@ -39,8 +39,8 @@
               <div class="col-2 flex justify-end items-center q-pt-sm">
                 <q-btn
                   round
-                  text-color="navy-blue"
-                  color="mint-1"
+                  text-color="mint-1"
+                  color="navy-blue"
                   icon="mdi-arrow-expand-all"
                   @click="showFullImage(art1.image)"
                 />
@@ -61,8 +61,8 @@
               <div class="col-12 col-md-2 flex justify-end items-center q-pt-sm">
                 <q-btn
                   round
-                  text-color="navy-blue"
-                  color="mint-1"
+                  text-color="mint-1"
+                  color="navy-blue"
                   icon="mdi-arrow-expand-all"
                   @click="showFullImage(art2.image)"
                 />

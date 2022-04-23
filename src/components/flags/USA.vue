@@ -1,6 +1,14 @@
 <template>
-  <div class="flag row">
+  <div
+    class="flag row"
+    @mouseover="showLabel = true"
+    @mouseout="showLabel = false"
+  >
     <div class="col bg-white br-30 relative-position">
+      <div class="absolute-center fit flex flex-center flag-label-div" style="z-index: 1" v-show="showLabel">
+        <h3 class="flag-label">English</h3>
+      </div>
+
       <!--
         NOTE: border for the blue part of the flag is 24 (and not 30),
         because there is a slight bug (I think) such that when we set it to 30,
@@ -28,6 +36,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      showLabel: false
+    }
+  }
+}
+</script>
 
 <style scoped>
 .sub-design {
