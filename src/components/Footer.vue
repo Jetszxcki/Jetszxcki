@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-grad-navy-blue row q-pa-xl q-mt-xl text-mint">
+  <div class="bg-navy-blue-1 row q-pa-xl q-mt-xl text-faded-grey-2">
     <div class="col">
       <Container class="full-height">
         <div class="row">
@@ -8,7 +8,7 @@
           </div>
 
           <div class="col-12 col-md-3 q-mt-xl">
-            <div class="text-h5 text-center font-pangolin q-mb-md text-weight-bolder">
+            <div class="text-h4 text-center font-pangolin q-mb-md text-weight-bolder">
               Explore
             </div>
             <div
@@ -30,7 +30,7 @@
           </div>
 
           <div class="col-12 col-md-3 q-mt-xl">
-            <div class="text-h5 text-center font-pangolin q-mb-md text-weight-bolder">
+            <div class="text-h4 text-center font-pangolin q-mb-md text-weight-bolder">
               Follow
             </div>
             <div
@@ -53,7 +53,7 @@
           </div>
 
           <div class="col-12 col-md-3 q-mt-xl">
-            <div class="text-h5 text-center font-pangolin q-mb-md text-weight-bolder">
+            <div class="text-h4 text-center font-pangolin q-mb-md text-weight-bolder">
               Contacts
             </div>
             <div class="row flex-center text-h6">skyjeth137120@gmail.com</div>

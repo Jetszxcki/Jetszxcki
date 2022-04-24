@@ -55,16 +55,12 @@ h1, h2, h3 {
   src: url('../assets/fonts/Pangolin-Regular.ttf');
 }
 @font-face {
-  font-family: Syne Mono;
-  src: url('../assets/fonts/SyneMono-Regular.ttf');
-}
-@font-face {
   font-family: Quicksand;
   src: url('../assets/fonts/Quicksand.ttf');
 }
 
-.font-syne-mono {
-  font-family: 'Syne Mono';
+.font-quicksand {
+  font-family: 'Quicksand';
 }
 .font-pangolin {
   font-family: 'Pangolin';
@@ -83,37 +79,6 @@ h1, h2, h3 {
 }
 .bg-mint-1 {
   background-color: $mint-1 !important;
-}
-.bg-grad-navy-blue {
-  background: linear-gradient(
-    $navy-blue,
-    $navy-blue-1,
-    $navy-blue-1,
-    $navy-blue
-  );
-}
-.bg-grad-navy-blue-up {
-  background: linear-gradient(
-    to top,
-    $navy-blue,
-    $navy-blue-1,
-    $navy-blue-1,
-    $navy-blue-1
-  );
-}
-.bg-grad-blue {
-  background: linear-gradient(
-    315deg,
-    $blue-4,
-    $blue
-  );
-}
-.bg-grad-yellow {
-  background: linear-gradient(
-    315deg,
-    $yellow-3,
-    $yellow-7
-  );
 }
 .bg-grad-red {
   background: linear-gradient(
@@ -205,15 +170,6 @@ h1, h2, h3 {
 }
 .br-tl-24 {
   border-top-left-radius: 24px !important;
-}
-
-// SHADOWS
-
-.light-blue-shadow {
-  box-shadow: 0px 20px 80px -30px $blue;
-}
-.light-blue-shadow-up {
-  box-shadow: 0px -40px 80px -30px $blue;
 }
 
 // TRANSFORMS

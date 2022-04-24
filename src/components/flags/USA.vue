@@ -14,7 +14,7 @@
         because there is a slight bug (I think) such that when we set it to 30,
         the red border below of the first stripe is seen
       -->
-      <div class="bg-blue br-tl-24 absolute sub-design flex flex-center">
+      <div class="bg-blue-5 br-tl-24 absolute sub-design flex flex-center">
         <q-icon
           name="mdi-star"
           color="white"
@@ -24,15 +24,15 @@
         />
       </div>
 
-      <div class="row h-11 bg-red br-t-30"></div>
+      <div class="row h-11 bg-red-5 br-t-30"></div>
       <div class="row h-11"></div>
-      <div class="row h-11 bg-red"></div>
+      <div class="row h-11 bg-red-5"></div>
       <div class="row h-11"></div>
-      <div class="row h-11 bg-red"></div>
+      <div class="row h-11 bg-red-5"></div>
       <div class="row h-11"></div>
-      <div class="row h-11 bg-red"></div>
+      <div class="row h-11 bg-red-5"></div>
       <div class="row h-11"></div>
-      <div class="row h-12 bg-red br-b-30"></div>
+      <div class="row h-12 bg-red-5 br-b-30"></div>
     </div>
   </div>
 </template>

@@ -1,13 +1,17 @@
 <!-- TODO:
   = add missing images
+  = create the flags as vector images
+  = check if can convert svg div curve to css only
+
   = USA flag has a weird white below at same dimensions
-  = github image showing white border
-  = add overlay text on mgmt tools and languages
+  = change icon on tab header
+  = add svg wave on footer
+
   = update time related content every month
 -->
 <template>
   <q-page class="q-pb-xl">
-    <Container id="the-jet" class="q-pt-xl bg-grad-navy-blue">
+    <Container id="the-jet" class="q-pt-xl bg-navy-blue-1">
       <q-intersection transition="slide-down" :transition-duration="1000" once>
         <div class="row flex-center">
           <h6 class="text-mint q-mb-none font-pangolin">
@@ -37,17 +41,11 @@
         </h4>
       </div>
     </Container>
-        
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#030518"
-        fill-opacity="1"
-        d="M0,192L80,181.3C160,171,320,149,480,138.7C640,128,800,128,960,138.7C1120,149,1280,171,1360,181.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-      ></path>
-    </svg>
+      
+    <q-img src="wave.svg" style="max-height: 450px" />
 
     <Container id="the-aircraft">
-      <div class="row q-pb-xl">
+      <div class="row q-pb-xl q-px-xl">
         <div class="col-12 col-md-6 q-pb-xl flex flex-center">
         </div>
         <div class="col-12 col-md-6 q-pb-xl">
@@ -94,18 +92,18 @@
         <div class="col-12 col-md-7">
           <div class="row h-50 justify-evenly">
             <q-intersection transition="scale" :transition-duration="1000" once>
-              <Philippines class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
+              <Philippines class="q-my-md q-mx-sm transition-up-20" />
             </q-intersection>
             <q-intersection transition="scale" :transition-duration="2000" once>
-              <USA class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
+              <USA class="q-my-md q-mx-sm transition-up-20" />
             </q-intersection>
           </div>
           <div class="row h-50 justify-evenly">
             <q-intersection transition="scale" :transition-duration="3000" once>
-              <France class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
+              <France class="q-my-md q-mx-sm transition-up-20" />
             </q-intersection>
             <q-intersection transition="scale" :transition-duration="4000" once>
-              <Russia class="q-my-md q-mx-sm light-blue-shadow transition-up-20" />
+              <Russia class="q-my-md q-mx-sm transition-up-20" />
             </q-intersection>
           </div>
         </div>
@@ -158,13 +156,12 @@
     </Container>
 
     <Container id="the-eco-friendly" container-class="br-b-30 q-py-xl shadow-10 bg-navy-blue-1">
-      <h2 class="text-center text-grad-mint q-px-xl q-pb-sm q-mb-md">
-        Eco-Friendly Plane
-      </h2>
-      
       <div class="row q-px-xl">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-md-5 flex flex-center">
           <q-intersection transition="slide-down" :transition-duration="1000" once>
+            <h2 class="text-center text-grad-mint q-mb-none">
+              Eco-Friendly Plane
+            </h2>                      
             <h5 class="q-pr-lg text-faded-grey-2">
               Unlike other planes, I am fueled by fries and mango shake.
 
@@ -176,6 +173,9 @@
         </div>
 
         <div class="col-12 col-md-7">
+          <q-intersection transition="scale" :transition-duration="1000" once>
+           <q-img src="food-and-study.svg" />
+          </q-intersection>
         </div>
       </div>
 
@@ -187,7 +187,7 @@
               v-for="mgmtTool, index in mgmtTools"
               :key="`tool-card-${index}`"
               :class="mgmtTool.class"
-              class="max-w-280 light-blue-shadow-up transition-up-20"
+              class="max-w-280 transition-up-20"
               :width="$q.screen.xs ? '200px' : ''"
               @mouseover="mgmtTool.showLabel = true"
               @mouseout="mgmtTool.showLabel = false"
@@ -224,16 +224,16 @@
 
     <Container id="the-artist" container-class="q-py-xl">
       <div class="text-center">
-        <h2 class="q-px-xl text-grad-dark-mint">The Artist</h2>
+        <h1 class="q-px-xl text-grad-dark-mint">The Artist</h1>
         <q-intersection transition="jump-right" :transition-duration="3000" once>
-          <h5 class="q-px-xl q-mb-none">
+          <h4 class="q-px-xl q-mb-none">
             Unable to fly, I can't use my creativity on combat.
-          </h5>
+          </h4>
         </q-intersection>
         <q-intersection transition="jump-left" :transition-duration="3000" once>
-          <h5 class="text-faded-grey-1 q-mt-none">
-            Instead, I diverted my imagination on arts.
-          </h5>
+          <h4 class="text-faded-grey-1 q-mt-none q-px-xl">
+            Instead, I diverted my imagination unto arts.
+          </h4>
         </q-intersection>
       </div>
 
@@ -244,24 +244,29 @@
         />
       </div>
 
+      <q-intersection transition="slide-up" :transition-duration="2000" once>
+        <q-img src="art-materials.svg" />
+      </q-intersection>
+
       <ArtCarousel />
 
       <div class="row text-center q-mt-xl">
         <div class="col">
-          <h3 class="text-faded-grey-1">
+          <h2 class="text-faded-grey-1 q-px-xl">
             ''Softwares are art too.''
-          </h3>
+          </h2>
 
           <q-intersection transition="jump-right" :transition-duration="3000" once>
-            <h5 class="q-mb-none">
-              Just like in art, there is also design in data and interfaces.
-            </h5>
+            <h4 class="q-mb-none q-px-xl">
+              There is beauty in data handling and user interface construction.
+            </h4>
           </q-intersection>
           <q-intersection transition="jump-left" :transition-duration="3000" once>
-            <h5 class="text-faded-grey-1 q-mt-none">
+            <h4 class="text-faded-grey-1 q-px-xl q-mt-none">
               Here are some projects I mainly contributed to:
-            </h5>
+            </h4>
           </q-intersection>
+
         </div>
       </div>
 
@@ -316,19 +321,19 @@ export default {
       mgmtTools: [
         {
           class: 'br-50-p rotate-350 bg-white',
-          image: 'github-logo.png',
+          image: 'github-logo.svg',
           name: 'Github',
           showLabel: false
         },
         {
           class: 'br-10-p rotate-10',
-          image: 'trello-logo.png',
+          image: 'trello-logo.svg',
           name: 'Trello',
           showLabel: false
         },
         {
           class: 'br-50-p mt-n-60',
-          image: 'slack-logo.png',
+          image: 'slack-logo.svg',
           name: 'Slack',
           showLabel: false
         },
@@ -458,11 +463,11 @@ export default {
           tech: [
             {
               name: 'Django',
-              color: 'green-7'
+              color: 'green-4'
             },
             {
               name: 'Nuxt',
-              color: 'teal'
+              color: 'teal-4'
             },
             {
               name: 'Telegram',
@@ -471,12 +476,12 @@ export default {
             {
               name: 'Twitter',
               icon: 'mdi-cancel',
-              color: 'blue'
+              color: 'blue-3'
             },
             {
               name: 'Reddit',
               icon: 'mdi-cancel',
-              color: 'orange'
+              color: 'orange-4'
             },
           ],
           sources: [
@@ -505,7 +510,7 @@ export default {
           tech: [
             {
               name: 'Django',
-              color: 'green-7'
+              color: 'green-4'
             },
             {
               name: 'Telegram',
@@ -539,7 +544,7 @@ export default {
           tech: [
             {
               name: 'Django',
-              color: 'green-7'
+              color: 'green-4'
             },
             {
               name: 'Telegram',
@@ -576,7 +581,7 @@ export default {
           tech: [
             {
               name: 'Django',
-              color: 'green-7'
+              color: 'green-4'
             },
             {
               name: 'Telegram',
@@ -602,11 +607,11 @@ export default {
           tech: [
             {
               name: 'Node',
-              color: 'green-4'
+              color: 'green-3'
             },
             {
               name: 'Javascript',
-              color: 'yellow'
+              color: 'yellow-4'
             },
             {
               name: 'NPM',
@@ -645,7 +650,7 @@ export default {
           tech: [
             {
               name: 'Django',
-              color: 'green-7'
+              color: 'green-4'
             },
             {
               name: 'Quasar',
@@ -653,7 +658,7 @@ export default {
             },
             {
               name: 'Javascript',
-              color: 'yellow'
+              color: 'yellow-4'
             },
             {
               name: 'App',
@@ -690,7 +695,7 @@ export default {
             },
             {
               name: 'Javascript',
-              color: 'yellow'
+              color: 'yellow-4'
             },
             {
               name: 'Desktop',
@@ -803,7 +808,7 @@ export default {
   width: 250px;
 }
 .full-name {
-  font-size: 85px;
+  font-size: 90px;
   line-height: 90%;
 }
 .max-w-280 {

@@ -12,13 +12,13 @@
       <h3 class="hover-label">Tagalog</h3>
     </div>
 
-    <div id="sun" class="absolute bg-yellow br-50-p"></div>
+    <div id="sun" class="absolute bg-warning br-50-p"></div>
     <q-icon
       v-for="i in 3"
       :key="i"
       :id="`star-${i}`"
       name="mdi-star"
-      color="yellow"
+      color="warning"
       size="md"
     />
 
@@ -28,8 +28,8 @@
     </div>
 
     <div class="col">
-      <div class="row bg-blue h-50 br-t-30"></div>
-      <div class="row bg-red h-50 br-b-30"></div>
+      <div class="row bg-blue-5 h-50 br-t-30"></div>
+      <div class="row bg-red-5 h-50 br-b-30"></div>
     </div>
   </div>
 </template>
@@ -53,13 +53,13 @@ export default {
 #triangle-top-right {
   width: 0;
   height: 0;
-  border-top: 105px solid $blue;
+  border-top: 105px solid $blue-5;
   border-left: 144px solid transparent;
 }
 #triangle-bottom-right {
   width: 0;
   height: 0;
-  border-bottom: 105px solid $red;
+  border-bottom: 105px solid $red-5;
   border-left: 144px solid transparent;
 }
 #sun {

@@ -7,7 +7,7 @@
       control-color="mint-1"
       control-type="unelevated"
       navigation-position="top"
-      class="bg-navy-blue br-30 shadow-10"
+      class="bg-navy-blue-1 br-30 shadow-10"
       height="550px"
       @mouseenter="autoplay = false"
       @mouseleave="autoplay = true"
@@ -17,6 +17,7 @@
       animated
       infinite
       navigation
+      padding
     >
       <q-carousel-slide
         v-for="[art1, art2], index in arts"
@@ -96,12 +97,12 @@ const media = {
   pencil: {
     text: 'Pencil',
     icon: 'mdi-pencil',
-    color: 'grad-yellow'
+    color: 'yellow-4'
   },
   msPaint: {
     text: 'MS Paint',
     icon: 'mdi-palette',
-    color: 'grad-blue'
+    color: 'blue-4'
   }
 }
 

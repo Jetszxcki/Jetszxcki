@@ -9,9 +9,9 @@
       <h3 class="hover-label">French</h3>
     </div>
 
-    <div class="col-4 bg-blue br-l-30"></div>
+    <div class="col-4 bg-blue-5 br-l-30"></div>
     <div class="col-4 bg-white"></div>
-    <div class="col-4 bg-red br-r-30"></div>
+    <div class="col-4 bg-red-5 br-r-30"></div>
   </div>
 </template>
 

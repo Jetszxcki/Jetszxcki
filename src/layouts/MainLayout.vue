@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header reveal class="bg-navy-blue">
+    <q-header reveal class="bg-navy-blue-1">
       <q-toolbar class="flex flex-center">
         <q-btn
           v-for="contact, index of contacts"
@@ -29,13 +29,15 @@
         :offset="[18, 18]"
         :duration="500"
       >
-        <q-btn
-          fab
-          icon="mdi-chevron-up"
-          color="grad-mint"
-          text-color="navy-blue"
-          class="shadow-10"
-        />
+        <q-intersection transition="rotate" :transition-duration="500">
+          <q-btn
+            fab
+            icon="mdi-chevron-up"
+            color="grad-mint"
+            text-color="navy-blue"
+            class="shadow-10"
+          />
+        </q-intersection>
       </q-page-scroller>
     </q-page-container>
   </q-layout>
