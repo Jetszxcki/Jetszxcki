@@ -7,7 +7,7 @@
       control-color="mint-1"
       control-type="unelevated"
       navigation-position="top"
-      class="bg-navy-blue-1 br-30 shadow-10"
+      class="bg-navy-blue-1 br-30 q-pa-md shadow-10"
       height="550px"
       @mouseenter="autoplay = false"
       @mouseleave="autoplay = true"

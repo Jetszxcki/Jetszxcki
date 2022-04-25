@@ -1,16 +1,14 @@
 <!-- TODO:
   = add missing images
+  = scale/create src set for sky clouds and ocean images
   = create the flags as vector images
-  = check if can convert svg div curve to css only
-
   = USA flag has a weird white below at same dimensions
   = change icon on tab header
-  = add svg wave on footer
 
   = update time related content every month
 -->
 <template>
-  <q-page class="q-pb-xl">
+  <q-page>
     <Container id="the-jet" class="q-pt-xl bg-navy-blue-1">
       <q-intersection transition="slide-down" :transition-duration="1000" once>
         <div class="row flex-center">
@@ -36,20 +34,21 @@
       </div>
 
       <div class="row flex-center text-center">
-        <h4 id="intro-subtext" class=" q-mt-none text-white q-px-lg">
+        <h4 id="intro-subtext" class=" q-mt-none q-mb-xl text-white q-px-lg">
           &nbsp; <!-- filler only, before animation kicks in -->
         </h4>
       </div>
     </Container>
       
-    <q-img src="wave.svg" style="max-height: 450px" />
+    <q-img src="clouds.svg" class="clouds" />
 
     <Container id="the-aircraft">
       <div class="row q-pb-xl q-px-xl">
-        <div class="col-12 col-md-6 q-pb-xl flex flex-center">
+        <div class="col-12 col-md-6 flex flex-center">
+          <q-img src="" width="500px" />
         </div>
-        <div class="col-12 col-md-6 q-pb-xl">
-          <q-intersection transition="slide-down" :transition-duration="1000" once>
+        <div class="col-12 col-md-6 flex flex-center">
+          <q-intersection transition="slide-down" :transition-duration="1000" once class="full-width">
             <h2 class="q-mb-none text-grad-dark-mint">An Aircraft on Foot</h2>
           </q-intersection>
 
@@ -253,7 +252,7 @@
       <div class="row text-center q-mt-xl">
         <div class="col">
           <h2 class="text-faded-grey-1 q-px-xl">
-            ''Softwares are art too.''
+            Softwares are art too.
           </h2>
 
           <q-intersection transition="jump-right" :transition-duration="3000" once>
@@ -666,7 +665,7 @@ export default {
             },
             {
               name: 'Beta',
-              color: 'grad-mint',
+              color: 'mint-1',
               icon: 'mdi-hammer-wrench'
             }
           ],
@@ -703,7 +702,7 @@ export default {
             },
             {
               name: 'OJT',
-              color: 'grad-mint',
+              color: 'mint-1',
               icon: 'mdi-account-tie'
             }
           ],
@@ -813,5 +812,9 @@ export default {
 }
 .max-w-280 {
   max-width: 280px;
+}
+.clouds {
+  min-height: 200px;
+  border-bottom: 1px solid white;
 }
 </style>
