@@ -50,6 +50,7 @@ h1, h2, h3 {
 
 // FONTS
 
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@700&display=swap');
 @font-face {
   font-family: Pangolin;
   src: url('../assets/fonts/Pangolin-Regular.ttf');
@@ -59,6 +60,9 @@ h1, h2, h3 {
   src: url('../assets/fonts/Quicksand.ttf');
 }
 
+.font-akshar {
+  font-family: 'Akshar';
+}
 .font-quicksand {
   font-family: 'Quicksand';
 }
@@ -99,13 +103,6 @@ h1, h2, h3 {
 
 .text-grad-mint {
   background: -webkit-linear-gradient(-70deg, $mint 10%, $mint-2 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-}
-.text-grad-dark-mint {
-  background: -webkit-linear-gradient(-70deg, $green-7 10%, $mint-2 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

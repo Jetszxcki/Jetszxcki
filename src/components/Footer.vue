@@ -6,8 +6,17 @@
       <div class="col">
         <Container class="full-height">
           <div class="row">
-            <div class="col-12 col-md-3 flex flex-center b3-red">
-              <q-img src="logos/jet-logo-1.svg" />
+            <div class="col-12 col-md-3 flex flex-center">
+              <q-intersection transition="scale" :transition-duration="2000" once>
+                <q-btn
+                  round
+                  flat
+                  class="home-btn-footer"
+                  @click="scrollTo('the-jet')"
+                >
+                  <q-img src="logos/jet-logo-1.svg" />
+                </q-btn>
+              </q-intersection>
             </div>
 
             <div class="col-12 col-md-3 q-mt-xl">
@@ -61,6 +70,8 @@
               </div>
               <div class="row flex-center text-h6">skyjeth137120@gmail.com</div>
               <div class="row flex-center text-h6">+639-75-463-6841</div>
+              <br>
+              <div class="row flex-center text-h6">&copy; 2022</div>
             </div>
           </div>
         </Container>
@@ -100,10 +111,6 @@ export default {
       ],
       sections: [
         {
-          name: 'The Jet',
-          to: 'the-jet'
-        },
-        {
           name: 'The Aircraft',
           to: 'the-aircraft'
         },
@@ -129,3 +136,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.home-btn-footer {
+  width: 200px;
+  height: 200px;
+}
+</style>

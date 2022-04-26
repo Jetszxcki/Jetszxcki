@@ -1,9 +1,7 @@
 <!-- TODO:
-  = add missing images
   = scale/create src set for sky clouds and ocean images
   = create the flags as vector images
   = USA flag has a weird white below at same dimensions
-  = change icon on tab header
 
   = update time related content every month
 -->
@@ -20,7 +18,7 @@
 
       <q-intersection transition="fade" :transition-duration="2000" once>
         <div class="row flex-center">
-          <p class="text-center q-mt-none q-mb-md font-pangolin text-weight-bolder q-pb-sm text-grad-mint full-name">
+          <p class="text-center q-mt-none q-mb-md font-akshar text-weight-bolder q-pb-sm text-grad-mint full-name">
             JETHRO ALBANO
           </p>
         </div>
@@ -40,19 +38,18 @@
       </div>
     </Container>
       
-    <q-img src="clouds.svg" class="clouds" />
+    <q-img src="clouds.svg" />
 
     <Container id="the-aircraft">
       <div class="row q-pb-xl q-px-xl">
         <div class="col-12 col-md-6 flex flex-center">
-          <q-img src="" width="500px" />
+          <q-intersection transition="slide-down" :transition-duration="2000" once class="full-width">
+            <q-img src="paradrop.svg" />
+          </q-intersection>
         </div>
         <div class="col-12 col-md-6 flex flex-center">
-          <q-intersection transition="slide-down" :transition-duration="1000" once class="full-width">
-            <h2 class="q-mb-none text-grad-dark-mint">An Aircraft on Foot</h2>
-          </q-intersection>
-
-          <q-intersection transition="slide-up" :transition-duration="1000" once>
+          <q-intersection transition="scale" :transition-duration="1000" once>
+            <h2 class="q-mb-none text-dark">An Aircraft on Foot</h2>
             <h5 class="text-faded-grey-1">
               <span class="text-navy-blue">Is it a bird, is it a plane? --- No, it's a Jet!</span>
               <br>
@@ -223,7 +220,7 @@
 
     <Container id="the-artist" container-class="q-py-xl">
       <div class="text-center">
-        <h1 class="q-px-xl text-grad-dark-mint">The Artist</h1>
+        <h1 class="q-px-xl text-dark">The Artist</h1>
         <q-intersection transition="jump-right" :transition-duration="3000" once>
           <h4 class="q-px-xl q-mb-none">
             Unable to fly, I can't use my creativity on combat.
@@ -812,9 +809,5 @@ export default {
 }
 .max-w-280 {
   max-width: 280px;
-}
-.clouds {
-  min-height: 200px;
-  border-bottom: 1px solid white;
 }
 </style>
