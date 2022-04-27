@@ -1,6 +1,6 @@
 # Jet's Site
 
-[link here soon](https://github.com/Jetszxcki/my-website)
+[Take a peek here](https://jetszxcki.github.io/Jetszxcki/#/)
 
 My personal website, showcasing my experiences as a programmer/developer. Also contains information of me, as a person --- `hobbies`, `favorite snacks` and more!
 
