@@ -42,7 +42,7 @@
         <q-btn
           v-for="source, index in sources"
           :key="index"
-          @click="redirectOrCopy(source.link)"
+          @click="clickAction(source.action)"
           :icon="source.icon"
           color="green-3"
           size="lg"
@@ -51,13 +51,29 @@
         />
       </q-card-actions>
     </q-card>
+
+    <q-dialog v-model="screenshotsDialog" class="fullscreen">
+      <q-card class="q-dialog-plugin full-width no-border-radius">
+        <ScreenshotsCarousel :images="screenshots" />
+      </q-card>
+    </q-dialog>
   </q-intersection>
 </template>
 
 <script>
+import ScreenshotsCarousel from 'components/carousels/ScreenshotsCarousel'
 import { copy } from '../../utils/funcs.js'
 
+const projCardActionTypes = {
+  redirect: 'redirect',
+  copy: 'copy',
+  screenshots: 'screenshots'
+}
+
 export default {
+  components: {
+    ScreenshotsCarousel
+  },
   props: {
     name: {
       type: String,
@@ -72,11 +88,17 @@ export default {
       default: () => [
         {
           icon: 'mdi-github',
-          link: 'https://google.com'
+          action: {
+            data: 'https://google.com',
+            type: projCardActionTypes.redirect
+          }
         },
         {
           icon: 'mdi-link-variant',
-          link: 'https://google.com'
+          action: {
+            data: 'https://google.com',
+            type: projCardActionTypes.redirect
+          }
         }
       ]
     },
@@ -90,15 +112,43 @@ export default {
     },
     tech: {
       type: Array,
-      default: () => []
+      default: () => [
+        {
+          name: 'Django',
+          color: 'green-4'
+        },
+        {
+          name: 'Telegram',
+          color: 'blue-4'
+        },
+        {
+          name: 'Twitter',
+          icon: 'mdi-cancel',
+          color: 'blue-3'
+        },
+        {
+          name: 'Reddit',
+          icon: 'mdi-cancel',
+          color: 'orange-4'
+        }
+      ]
+    }
+  },
+  data () {
+    return {
+      screenshotsDialog: false,
+      screenshots: []
     }
   },
   methods: {
-    redirectOrCopy (link) {
-      if (link.startsWith('http') || link.startsWith('https')) {
-        window.open(link, '_blank')
-      } else {
-        copy(link)
+    clickAction (action) {
+      if (action.type === projCardActionTypes.redirect) {
+        window.open(action.data, '_blank')
+      } else if (action.type === projCardActionTypes.copy) {
+        copy(action.data)
+      } else if (action.type === projCardActionTypes.screenshots) {
+        this.screenshotsDialog = true
+        this.screenshots = action.data
       }
     }
   }

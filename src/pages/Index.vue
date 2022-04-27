@@ -1,9 +1,11 @@
 <!-- TODO:
-  = scale/create src set for sky clouds and ocean images
   = create the flags as vector images
   = USA flag has a weird white below at same dimensions
+  = add redirect to prog/human language buttons
 
-  = update time related content every month
+  INTERVALLY:
+    = update time related content/components
+    = update status related content/components
 -->
 <template>
   <q-page>
@@ -40,7 +42,7 @@
       
     <q-img src="clouds.svg" />
 
-    <Container id="the-aircraft">
+    <Container id="the-aircraft" container-class="br-t-30">
       <div class="row q-pb-xl q-px-xl">
         <div class="col-12 col-md-6 flex flex-center">
           <q-intersection transition="slide-down" :transition-duration="2000" once class="full-width">
@@ -69,7 +71,7 @@
       </div>
     </Container>
 
-    <Container id="the-polyglot" container-class="bg-navy-blue br-t-30 shadow-up-10 q-pa-xl">
+    <Container id="the-polyglot" container-class="bg-navy-blue br-t-30 q-pa-xl">
       <div class="row">
         <div class="col-12 col-md-5 q-pr-lg q-pb-lg flex flex-center">
           <h2 class="q-mb-none q-mt-lg q-py-xs text-grad-mint full-width">
@@ -151,11 +153,11 @@
       </div>
     </Container>
 
-    <Container id="the-eco-friendly" container-class="br-b-30 q-py-xl shadow-10 bg-navy-blue-1">
+    <Container id="the-eco-friendly" container-class="q-py-xl bg-navy-blue-1">
       <div class="row q-px-xl">
         <div class="col-12 col-md-5 flex flex-center">
           <q-intersection transition="slide-down" :transition-duration="1000" once>
-            <h2 class="text-center text-grad-mint q-mb-none">
+            <h2 class="text-grad-mint q-mb-none">
               Eco-Friendly Plane
             </h2>                      
             <h5 class="q-pr-lg text-faded-grey-2">
@@ -218,15 +220,15 @@
       </div>
     </Container>
 
-    <Container id="the-artist" container-class="q-py-xl">
+    <Container id="the-artist" container-class="q-pt-xl bg-grey-2">
       <div class="text-center">
         <h1 class="q-px-xl text-dark">The Artist</h1>
-        <q-intersection transition="jump-right" :transition-duration="3000" once>
+        <q-intersection transition="jump-down" :transition-duration="1000" once>
           <h4 class="q-px-xl q-mb-none">
             Unable to fly, I can't use my creativity on combat.
           </h4>
         </q-intersection>
-        <q-intersection transition="jump-left" :transition-duration="3000" once>
+        <q-intersection transition="jump-up" :transition-duration="1000" once>
           <h4 class="text-faded-grey-1 q-mt-none q-px-xl">
             Instead, I diverted my imagination unto arts.
           </h4>
@@ -245,20 +247,22 @@
       </q-intersection>
 
       <ArtCarousel />
+    </Container>
 
+    <Container container-class="bg-navy-blue q-pb-xl br-b-30 q-mb-xl">
       <div class="row text-center q-mt-xl">
         <div class="col">
-          <h2 class="text-faded-grey-1 q-px-xl">
+          <h2 class="text-faded-grey-2 q-px-xl">
             Softwares are art too.
           </h2>
 
-          <q-intersection transition="jump-right" :transition-duration="3000" once>
-            <h4 class="q-mb-none q-px-xl">
-              There is beauty in data handling and user interface construction.
+          <q-intersection transition="jump-down" :transition-duration="1000" once>
+            <h4 class="q-mb-none q-px-xl text-white">
+              There is beauty in data handling and user interface designing.
             </h4>
           </q-intersection>
-          <q-intersection transition="jump-left" :transition-duration="3000" once>
-            <h4 class="text-faded-grey-1 q-px-xl q-mt-none">
+          <q-intersection transition="jump-up" :transition-duration="1000" once>
+            <h4 class="text-faded-grey-2 q-px-xl q-mt-none">
               Here are some projects I mainly contributed to:
             </h4>
           </q-intersection>
@@ -299,6 +303,12 @@ import USA from 'components/flags/USA'
 import ArtCarousel from 'components/carousels/ArtCarousel'
 import ProjectCard from 'components/cards/ProjectCard'
 import Container from 'components/Container'
+
+const projCardActionTypes = {
+  redirect: 'redirect',
+  copy: 'copy',
+  screenshots: 'screenshots'
+}
 
 export default {
   name: "PageIndex",
@@ -462,10 +472,6 @@ export default {
               color: 'green-4'
             },
             {
-              name: 'Nuxt',
-              color: 'teal-4'
-            },
-            {
               name: 'Telegram',
               color: 'blue-4'
             },
@@ -483,15 +489,38 @@ export default {
           sources: [
             {
               icon: 'mdi-robot-happy',
-              link: '@SpiceTippingBot'
+              action: {
+                data: '@SpiceTippingBot',
+                type: projCardActionTypes.copy
+              }
             },
             {
               icon: 'mdi-telegram',
-              link: 'https://t.me/spicetoken'
+              action: {
+                data: 'https://t.me/spicetoken',
+                type: projCardActionTypes.redirect
+              }
             },
             {
               icon: 'mdi-link-variant',
-              link: 'https://spicetoken.org/'
+              action: {
+                data: 'https://spicetoken.org/',
+                type: projCardActionTypes.redirect
+              }
+            },
+            {
+              icon: 'mdi-image',
+              action: {
+                data: [
+                  'spice-bot/1.png',
+                  'spice-bot/2.png',
+                  'spice-bot/3.png',
+                  'spice-bot/4.png',
+                  'spice-bot/5.png',
+                  'spice-bot/6.png'
+                ],
+                type: projCardActionTypes.screenshots
+              }
             }
           ]
         },
@@ -516,15 +545,33 @@ export default {
           sources: [
             {
               icon: 'mdi-robot-happy',
-              link: '@SpiceWagerBot'
+              action: {
+                data: '@SpiceWagerBot',
+                type: projCardActionTypes.copy
+              }
             },
             {
               icon: 'mdi-dice-1',
-              link: 'https://t.me/CasaDeDice'
+              action: {
+                data: 'https://t.me/CasaDeDice',
+                type: projCardActionTypes.redirect
+              }
             },
             {
               icon: 'mdi-dice-2',
-              link: 'https://t.me/CasaDeDice2'
+              action: {
+                data: 'https://t.me/CasaDeDice2',
+                type: projCardActionTypes.redirect
+              }
+            },
+            {
+              icon: 'mdi-image',
+              action: {
+                data: [
+                  'spice-casa/1.png'
+                ],
+                type: projCardActionTypes.screenshots
+              }
             }
           ]
         },
@@ -550,19 +597,42 @@ export default {
           sources: [
             {
               icon: 'mdi-robot-happy',
-              link: '@SpiceJankenBot'
+              action: {
+                data: '@SpiceJankenBot',
+                type: projCardActionTypes.copy
+              }
             },
             {
               icon: 'mdi-sword',
-              link: 'https://t.me/CasaDeJanken'
+              action: {
+                data: 'https://t.me/CasaDeJanken',
+                type: projCardActionTypes.redirect
+              }
             },
             {
               icon: 'mdi-sword-cross',
-              link: 'https://t.me/CasaDeJanken2'
+              action: {
+                data: 'https://t.me/CasaDeJanken2',
+                type: projCardActionTypes.redirect
+              }
             },
             {
               icon: 'mdi-clipboard-list',
-              link: 'https://t.me/CasaDeJanken3'
+              action: {
+                data: 'https://t.me/CasaDeJanken3',
+                type: projCardActionTypes.redirect
+              }
+            },
+            {
+              icon: 'mdi-image',
+              action: {
+                data: [
+                  'janken/1.png',
+                  'janken/2.png',
+                  'janken/3.png'
+                ],
+                type: projCardActionTypes.screenshots
+              }
             }
           ]
         },
@@ -587,7 +657,30 @@ export default {
           sources: [
             {
               icon: 'mdi-robot-happy',
-              link: '@SpiceTraderBot'
+              action: {
+                data: '@SpiceTraderBot',
+                type: projCardActionTypes.copy
+              }
+            },
+            {
+              icon: 'mdi-telegram',
+              action: {
+                data: 'https://t.me/Spicerunner',
+                type: projCardActionTypes.redirect
+              }
+            },
+            {
+              icon: 'mdi-image',
+              action: {
+                data: [
+                  'spice-trade/1.png',
+                  'spice-trade/2.png',
+                  'spice-trade/3.png',
+                  'spice-trade/4.png',
+                  'spice-trade/5.png'
+                ],
+                type: projCardActionTypes.screenshots
+              }
             }
           ]
         },
@@ -618,19 +711,31 @@ export default {
           sources: [
             {
               icon: 'mdi-github',
-              link: 'https://github.com/paytaca/watchtower-cash-js'
+              action: {
+                data: 'https://github.com/paytaca/watchtower-cash-js',
+                type: projCardActionTypes.redirect
+              }
             },
             {
               icon: 'mdi-link-variant',
-              link: 'https://watchtower.cash'
+              action: {
+                data: 'https://watchtower.cash',
+                type: projCardActionTypes.redirect
+              }
             },
             {
               icon: 'mdi-telegram',
-              link: 'https://t.me/WatchTowerCash'
+              action: {
+                data: 'https://t.me/WatchTowerCash',
+                type: projCardActionTypes.redirect
+              }
             },
             {
               icon: 'mdi-npm',
-              link: 'https://www.npmjs.com/package/watchtower-cash-js'
+              action: {
+                data: 'https://www.npmjs.com/package/watchtower-cash-js',
+                type: projCardActionTypes.redirect
+              }
             }
           ]
         },
@@ -669,7 +774,24 @@ export default {
           sources: [
             {
               icon: 'mdi-google-play',
-              link: 'https://play.google.com/store/apps/details?id=cash.purelypeer.app'
+              action: {
+                data: 'https://play.google.com/store/apps/details?id=cash.purelypeer.app',
+                type: projCardActionTypes.redirect
+              }
+            },
+            {
+              icon: 'mdi-image',
+              action: {
+                data: [
+                  'purelypeer/1.jpg',
+                  'purelypeer/2.jpg',
+                  'purelypeer/3.jpg',
+                  'purelypeer/4.jpg',
+                  'purelypeer/5.jpg',
+                  'purelypeer/6.jpg'
+                ],
+                type: projCardActionTypes.screenshots
+              }
             }
           ]
         },
@@ -706,7 +828,10 @@ export default {
           sources: [
             {
               icon: 'mdi-github',
-              link: 'https://github.com/Jetszxcki/LECCO-System'
+              action: {
+                data: 'https://github.com/Jetszxcki/LECCO-System',
+                type: projCardActionTypes.redirect
+              }
             }
           ]
         },
@@ -729,11 +854,17 @@ export default {
           sources: [
             {
               icon: 'mdi-file-document',
-              link: 'https://drive.google.com/file/d/10YT7KXHW4xZw_vG_YoAws9Wtsx7mNrsL/view?usp=sharing'
+              action: {
+                data: 'https://drive.google.com/file/d/10YT7KXHW4xZw_vG_YoAws9Wtsx7mNrsL/view?usp=sharing',
+                type: projCardActionTypes.redirect
+              }
             },
             {
               icon: 'mdi-package-down',
-              link: 'https://drive.google.com/file/d/1ocEammzVwpgtVHrMprcMwOXMFH1QavfU/view?usp=sharing'
+              action: {
+                data: 'https://drive.google.com/file/d/1ocEammzVwpgtVHrMprcMwOXMFH1QavfU/view?usp=sharing',
+                type: projCardActionTypes.redirect
+              }
             }
           ]
         }

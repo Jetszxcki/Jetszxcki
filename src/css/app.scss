@@ -9,7 +9,7 @@ a {
   color: $blue-9
 }
 h1, h2, h3 {
-  font-family: 'Pangolin';
+  font-family: 'Akshar';
   font-weight: 600;
   letter-spacing: 3px;
 }
@@ -50,7 +50,10 @@ h1, h2, h3 {
 
 // FONTS
 
-@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@700&display=swap');
+@font-face {
+  font-family: Akshar;
+  src: url('../assets/fonts/Akshar.ttf');
+}
 @font-face {
   font-family: Pangolin;
   src: url('../assets/fonts/Pangolin-Regular.ttf');
