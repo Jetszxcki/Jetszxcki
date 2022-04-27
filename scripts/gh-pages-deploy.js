@@ -13,7 +13,7 @@ const thirdLog = emoji.get('rocket') + ' ' + chalk.green('Your app successfully 
     console.log(firstLog)
     
     await execa.command('quasar build', { stdio: 'inherit' })
-    await execa.command('git --work-tree dist add --all')
+    await execa.command('git --work-tree dist/spa add --all')
     await execa.command('git --work-tree dist/spa commit -m "gh-pages"')
     console.log(secondLog)
     
