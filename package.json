@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -26,7 +27,11 @@
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-vue": "^7.0.0",
     "eslint-webpack-plugin": "^2.4.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "quasar-app-extension-gh-pages-auto-deploy": "^0.4.0",
+    "chalk": "^4.0.0",
+    "execa": "^4.0.0",
+    "node-emoji": "^1.10.0"
   },
   "browserslist": [
     "last 10 Chrome versions",

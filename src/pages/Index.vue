@@ -1,12 +1,3 @@
-<!-- TODO:
-  = create the flags as vector images
-  = USA flag has a weird white below at same dimensions
-  = add redirect to prog/human language buttons
-
-  INTERVALLY:
-    = update time related content/components
-    = update status related content/components
--->
 <template>
   <q-page>
     <Container id="the-jet" class="q-pt-xl bg-navy-blue-1">
