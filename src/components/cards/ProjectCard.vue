@@ -1,6 +1,6 @@
 <template>
   <q-intersection transition="scale" :transition-duration="1500" once>
-    <q-card class="shadow-10 transition-up-20 br-30 bg-navy-blue-1" style="min-height: 720px">
+    <q-card class="shadow-10 transition-up-20 br-30 bg-navy-blue-1 mh-750">
       <q-card-section class="flex flex-center">
         <q-img
           :src="`logos/${image}`"
@@ -14,6 +14,7 @@
         <div class="text-h4 font-pangolin text-green-3 q-mb-sm" style="letter-spacing: 2px">
           <b>{{ name }}</b>
         </div>
+
 
         <div class="q-mb-md q-px-md flex flex-center">
           <q-chip
@@ -31,6 +32,7 @@
           </q-chip>
         </div>
 
+        <p class="text-white text-h6 q-mb-none">{{ year }}</p>
         <div class="text-h6 text-center text-faded-grey-2 q-px-md q-py-md" style="line-height: 27px">
           {{ description }}
         </div>
@@ -78,6 +80,10 @@ export default {
     name: {
       type: String,
       default: 'Project Name'
+    },
+    year: {
+      type: String,
+      default: 'Year Here'
     },
     description: {
       type: String,
@@ -163,5 +169,8 @@ export default {
 <style scoped>
 .mw-80 {
   min-width: 80vw;
+}
+.mh-750 {
+  min-height: 750px
 }
 </style>
