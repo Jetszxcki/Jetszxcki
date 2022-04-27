@@ -52,8 +52,8 @@
       </q-card-actions>
     </q-card>
 
-    <q-dialog v-model="screenshotsDialog" class="fullscreen">
-      <q-card class="q-dialog-plugin full-width no-border-radius">
+    <q-dialog v-model="screenshotsDialog">
+      <q-card :class="ssCardClass">
         <ScreenshotsCarousel :images="screenshots" />
       </q-card>
     </q-dialog>
@@ -136,8 +136,9 @@ export default {
   },
   data () {
     return {
+      screenshots: [],
       screenshotsDialog: false,
-      screenshots: []
+      ssCardClass: 'q-dialog-plugin full-width no-border-radius'
     }
   },
   methods: {
@@ -149,8 +150,18 @@ export default {
       } else if (action.type === projCardActionTypes.screenshots) {
         this.screenshotsDialog = true
         this.screenshots = action.data
+
+        if (this.name.toLowerCase() === 'honk-a-bet') {
+          this.ssCardClass += ' mw-80'
+        }
       }
     }
   }
 }
 </script>
+
+<style scoped>
+.mw-80 {
+  min-width: 80vw;
+}
+</style>

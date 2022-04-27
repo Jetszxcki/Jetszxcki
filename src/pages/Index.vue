@@ -512,12 +512,12 @@ export default {
               icon: 'mdi-image',
               action: {
                 data: [
-                  'spice-bot/1.png',
-                  'spice-bot/2.png',
-                  'spice-bot/3.png',
-                  'spice-bot/4.png',
-                  'spice-bot/5.png',
-                  'spice-bot/6.png'
+                  'spice-bot/1.jpg',
+                  'spice-bot/2.jpg',
+                  'spice-bot/3.jpg',
+                  'spice-bot/4.jpg',
+                  'spice-bot/5.jpg',
+                  'spice-bot/6.jpg'
                 ],
                 type: projCardActionTypes.screenshots
               }
@@ -568,7 +568,7 @@ export default {
               icon: 'mdi-image',
               action: {
                 data: [
-                  'spice-casa/1.png'
+                  'spice-casa/1.jpg'
                 ],
                 type: projCardActionTypes.screenshots
               }
@@ -627,9 +627,9 @@ export default {
               icon: 'mdi-image',
               action: {
                 data: [
-                  'janken/1.png',
-                  'janken/2.png',
-                  'janken/3.png'
+                  'janken/1.jpg',
+                  'janken/2.jpg',
+                  'janken/3.jpg'
                 ],
                 type: projCardActionTypes.screenshots
               }
@@ -673,11 +673,54 @@ export default {
               icon: 'mdi-image',
               action: {
                 data: [
-                  'spice-trade/1.png',
-                  'spice-trade/2.png',
-                  'spice-trade/3.png',
-                  'spice-trade/4.png',
-                  'spice-trade/5.png'
+                  'spice-trade/1.jpg',
+                  'spice-trade/2.jpg',
+                  'spice-trade/3.jpg',
+                  'spice-trade/4.jpg'
+                ],
+                type: projCardActionTypes.screenshots
+              }
+            }
+          ]
+        },
+        {
+          name: 'Honk-A-Bet',
+          image: 'honkabet-logo.png',
+          imageClass: 'br-30',
+          description: `
+            A betting site where you can use crypto-tokens to stake
+            across a wide variety of sports.
+            Server is currently down due to lack of funding from the client/owner.
+          `,
+          tech: [
+            {
+              name: 'Django',
+              color: 'green-4'
+            },
+            {
+              name: 'Nuxt',
+              color: 'teal'
+            },
+            {
+              name: 'Unsupported',
+              color: 'grey',
+              icon: 'mdi-cancel'
+            }
+          ],
+          sources: [
+            {
+              icon: 'mdi-link-variant',
+              action: {
+                data: 'https://honkabet.scibizinformatics.com',
+                type: projCardActionTypes.redirect
+              }
+            },
+            {
+              icon: 'mdi-image',
+              action: {
+                data: [
+                  'honkabet/1.JPG',
+                  'honkabet/2.JPG',
                 ],
                 type: projCardActionTypes.screenshots
               }
