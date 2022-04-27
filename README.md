@@ -1,10 +1,12 @@
-# Jet's Site
+# Hi && Hello World!
 
-[Take a peek here](https://jetszxcki.github.io/Jetszxcki/#/)
+This is my personal website, showcasing my experiences as a programmer/developer, and as a person as well.
+Contains information of me, as a person --- `hobbies`, `favorite snacks` and more!
 
-My personal website, showcasing my experiences as a programmer/developer. Also contains information of me, as a person --- `hobbies`, `favorite snacks` and more!
+This is still under development, but is already viable for publicity ---
+[take a peek here](https://jetszxcki.github.io/Jetszxcki/#/)
 
-This is still under development, so, stay tuned for updates! 
+Will continuously update this for design, blog and more content updates!
 
 **À bientôt!**
 
