@@ -168,9 +168,6 @@ h1, h2, h3 {
   border-bottom-left-radius: 30px !important;
   border-bottom-right-radius: 30px !important;
 }
-.br-tl-24 {
-  border-top-left-radius: 24px !important;
-}
 
 // TRANSFORMS
 
@@ -216,11 +213,6 @@ h1, h2, h3 {
 
 // COMPONENT or EVENT-SPECIFIC
 
-.flag {
-  min-width: 320px;
-  min-height: 210px;
-  border-radius: 30px;
-}
 .hover-label {
   color: white;
   text-align: center;
@@ -233,7 +225,7 @@ h1, h2, h3 {
 }
 .hover-label-div {
   background-color: $dark;
-  border-radius: 24px;
+  border-radius: 30px;
   opacity: 0.5;
 }
 

@@ -79,20 +79,19 @@
         </div>
 
         <div class="col-12 col-md-7">
-          <div class="row h-50 justify-evenly">
-            <q-intersection transition="scale" :transition-duration="1000" once>
-              <Philippines class="q-my-md q-mx-sm transition-up-20" />
-            </q-intersection>
-            <q-intersection transition="scale" :transition-duration="2000" once>
-              <USA class="q-my-md q-mx-sm transition-up-20" />
-            </q-intersection>
-          </div>
-          <div class="row h-50 justify-evenly">
-            <q-intersection transition="scale" :transition-duration="3000" once>
-              <France class="q-my-md q-mx-sm transition-up-20" />
-            </q-intersection>
-            <q-intersection transition="scale" :transition-duration="4000" once>
-              <Russia class="q-my-md q-mx-sm transition-up-20" />
+          <div class="row h-50 justify-evenly" v-for="flagPair, index in flags" :key="index">
+            <q-intersection
+              v-for="flag, idx in flagPair"
+              :key="idx"
+              :transition-duration="(index + idx + 1) * 1000"
+              transition="scale"
+              once
+            >
+              <Flag
+                class="q-my-md q-mx-sm transition-up-20"
+                :language="flag.language"
+                :image="flag.image"
+              />
             </q-intersection>
           </div>
         </div>
@@ -287,14 +286,10 @@
 </template>
 
 <script>
-import Philippines from 'components/flags/Philippines'
-import Russia from 'components/flags/Russia'
-import France from 'components/flags/France'
-import USA from 'components/flags/USA'
-
 import ArtCarousel from 'components/carousels/ArtCarousel'
 import ProjectCard from 'components/cards/ProjectCard'
 import Container from 'components/Container'
+import Flag from 'components/Flag'
 
 const projCardActionTypes = {
   redirect: 'redirect',
@@ -308,14 +303,33 @@ export default {
     Container,
     ArtCarousel,
     ProjectCard,
-    Philippines,
-    Russia,
-    France,
-    USA,
+    Flag,
   },
   data () {
     return {
       typeSpeed: 50, // in milliseconds
+      flags: [
+        [
+          {
+            language: 'Tagalog',
+            image: 'philippines.svg'
+          },
+          {
+            language: 'English',
+            image: 'usa.svg'
+          }
+        ],
+        [
+          {
+            language: 'French',
+            image: 'france.svg'
+          },
+          {
+            language: 'Russian',
+            image: 'russia.svg'
+          }
+        ]
+      ],
       mgmtTools: [
         {
           class: 'br-50-p rotate-350 bg-white',

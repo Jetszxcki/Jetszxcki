@@ -46,7 +46,7 @@
 <script>
 import Footer from 'components/Footer'
 
-import { copy } from '../utils/funcs.js'
+import { copy, smoothScrollTo } from '../utils/funcs.js'
 
 export default {
   name: "MainLayout",
@@ -57,14 +57,19 @@ export default {
     return {
       contacts: [
         {
-          name: 'Twitter',
-          icon: 'mdi-twitter',
-          url: 'https://twitter.com/jetszxcki',
+          name: 'Home',
+          icon: 'mdi-home',
+          url: 'https://jetszxcki.github.io/Jetszxcki/',
         },
         {
           name: 'Facebook',
           icon: 'mdi-facebook',
           url: 'https://www.facebook.com/jetszxcki',
+        },
+        {
+          name: 'Twitter',
+          icon: 'mdi-twitter',
+          url: 'https://twitter.com/jetszxcki',
         },
         {
           name: 'Gmail',
@@ -91,8 +96,14 @@ export default {
   },
   methods: {
     openContact (contact) {
-      if (contact.icon === 'mdi-gmail') {
+      if (contact.name === 'Gmail') {
         copy(contact.url)
+      } else if (contact.name === 'Home') {
+        if (this.$route.path === '/') {
+          smoothScrollTo('the-jet', document)
+        } else {
+          this.$router.push('/')
+        }
       } else {
         window.open(contact.url, '_blank')
       }

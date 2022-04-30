@@ -1,7 +1,7 @@
-# Hi && Hello World!
+# An Aircraft on Foot
 
-This is my personal website, showcasing my experiences as a programmer/developer, and as a person as well.
-Contains information of me, as a person --- `hobbies`, `favorite snacks` and more!
+Below is my website showcasing my experiences as a programmer/developer.
+Also contains information of me, as a person --- `hobbies`, `favorite snacks` and more!
 
 This is still under development, but is already viable for publicity ---
 [take a peek here](https://jetszxcki.github.io/Jetszxcki/#/)
