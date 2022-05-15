@@ -308,7 +308,7 @@
           icon-right="mdi-arrow-right"
           text-color="navy-blue-1"
           class="q-mt-md"
-          color="grey-2"
+          color="grey-4"
           to="/blogs"
           size="xl"
           rounded

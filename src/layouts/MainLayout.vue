@@ -100,27 +100,27 @@ export default {
         {
           name: 'The Aircraft',
           icon: 'mdi-airplane mdi-rotate-45',
-          path: '/the-aircraft'
+          path: '/coming-soon'
         },
         {
           name: 'The Polyglot',
           icon: 'mdi-head-dots-horizontal',
-          path: '/the-polyglot'
+          path: '/coming-soon'
         },
         {
           name: 'The Eco-Friendly',
           icon: 'mdi-leaf',
-          path: '/the-eco-friendly'
+          path: '/coming-soon'
         },
         {
           name: 'The Artist',
           icon: 'mdi-palette',
-          path: '/the-artist'
+          path: '/coming-soon'
         },
         {
           name: 'Blogs',
           icon: 'mdi-pen',
-          path: '/blogs'
+          path: '/coming-soon'
         },
         {
           name: 'Contacts',

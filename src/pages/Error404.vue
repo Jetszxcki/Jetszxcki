@@ -1,6 +1,5 @@
 <template>
   <Container style="height: 100vh">
-
     <div class="row flex-center">
       <q-intersection transition="slide-down" :transition-duration="1000" once>
         <h1 class="q-mr-xs">4</h1>
@@ -24,24 +23,27 @@
       <q-intersection transition="slide-up" :transition-duration="1000" once>
         <h1>4</h1>
       </q-intersection>
-
     </div>
 
     <div class="row flex-center mt-n-60">
       <q-intersection transition="slide-down" :transition-duration="2000" once>
+        <h6 class="q-ml-sm q-my-none font-pangolin">Nothing here</h6>
+      </q-intersection>
+    </div>
+
+    <div class="row flex-center">
+      <q-intersection transition="slide-down" :transition-duration="2000" once>
         <q-btn
           @click="$router.go(-1)"
           icon="mdi-arrow-left"
-          label="Nothing here"
-          class="q-ml-sm font-pangolin"
-          size="lg"
-          no-caps
+          class="q-ml-sm q-mt-md font-pangolin"
+          color="grey-4"
+          text-color="navy-blue-1"
+          size="md"
           rounded
-          flat
-          push
+          unelevated
         />
       </q-intersection>
-    
     </div>
   </Container>
 </template>

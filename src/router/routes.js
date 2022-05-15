@@ -7,6 +7,10 @@ const routes = [
     ],
   },
   {
+    path: "/coming-soon",
+    component: () => import("pages/Soon.vue"),
+  },
+  {
     path: "/:catchAll(.*)*",
     component: () => import("pages/Error404.vue"),
   },
