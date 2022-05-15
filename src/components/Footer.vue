@@ -125,6 +125,10 @@ export default {
         {
           name: 'The Artist',
           to: 'the-artist'
+        },
+        {
+          name: 'Blogs',
+          to: 'blogs'
         }
       ]
     }

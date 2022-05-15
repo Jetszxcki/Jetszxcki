@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Quicksand';
-  color: $navy-blue;
+  color: $navy-blue-1;
 }
 a {
   text-decoration: none;
@@ -136,6 +136,19 @@ h1, h2, h3 {
 }
 .transition-up-20:hover {
   top: -20px;
+}
+.transition-zoom-1-05 {
+  transition: transform ease 0.5s;
+}
+.transition-zoom-1-05:hover {
+  transform: scale(1.05);
+}
+.transition-zoom-1-1 {
+  transition: transform ease 0.5s;
+}
+.transition-zoom-1-1:hover {
+  transform: scale(1.1);
+  z-index: 5;
 }
 
 // BORDERS

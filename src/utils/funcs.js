@@ -28,7 +28,7 @@ function smoothScrollTo (id, document) {
   const el = document.getElementById(id)
   const target = getScrollTarget(el)
   const offset = el.offsetTop
-  setVerticalScrollPosition(target, offset, 500)
+  setVerticalScrollPosition(target, offset, 1000)
 }
 
 export { copy, smoothScrollTo }

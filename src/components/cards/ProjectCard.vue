@@ -1,6 +1,6 @@
 <template>
   <q-intersection transition="scale" :transition-duration="1500" once>
-    <q-card class="shadow-10 transition-up-20 br-30 bg-navy-blue-1 mh-750">
+    <q-card class="shadow-10 transition-zoom-1-1 br-30 bg-navy-blue-1 mh-750">
       <q-card-section class="flex flex-center">
         <q-img
           :src="`logos/${image}`"

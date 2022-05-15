@@ -175,7 +175,7 @@
               v-for="mgmtTool, index in mgmtTools"
               :key="`tool-card-${index}`"
               :class="mgmtTool.class"
-              class="max-w-280 transition-up-20"
+              class="transition-up-20"
               :width="$q.screen.xs ? '200px' : ''"
               @mouseover="mgmtTool.showLabel = true"
               @mouseout="mgmtTool.showLabel = false"
@@ -247,14 +247,14 @@
           </h2>
 
           <q-intersection transition="jump-down" :transition-duration="1000" once>
-            <h4 class="q-mb-none q-px-xl text-white">
+            <h5 class="q-mb-none q-px-xl text-white">
               There is beauty in data handling and user interface designing.
-            </h4>
+            </h5>
           </q-intersection>
           <q-intersection transition="jump-up" :transition-duration="1000" once>
-            <h4 class="text-faded-grey-2 q-px-xl q-mt-none">
+            <h5 class="text-faded-grey-2 q-px-xl q-mt-none">
               Here are some projects I mainly contributed to:
-            </h4>
+            </h5>
           </q-intersection>
 
         </div>
@@ -282,10 +282,46 @@
         />
       </div>
     </Container>
+
+    <Container id="blogs" container-class="text-center q-pb-md q-px-xl">
+      <h2>''Talking to oneself is healthy for the mind''</h2>
+      <h5 class="q-mb-xl">
+        I think a lot. Usually, I express my thoughts through writing or talking to myself, alone in a room (I know... I'm crazy).
+        <span class="text-faded-grey-1">
+          Dwell across my thoughts and know more about me mentally on my blogs.
+        </span>
+      </h5>
+
+      <RecentBlogCard
+        v-for="rb, index in recentBlogs"
+        :key="index"
+        :to="rb.to"
+        :category="rb.category"
+        :header="rb.header"
+        :image="rb.image"
+        :date="rb.date"
+      />
+
+      <q-intersection transition="slide-up" :transition-duration="1000" once>
+        <q-btn
+          label="See More"
+          icon-right="mdi-arrow-right"
+          text-color="navy-blue-1"
+          class="q-mt-md"
+          color="grey-2"
+          to="/blogs"
+          size="xl"
+          rounded
+          unelevated
+          disable
+        />
+      </q-intersection>
+    </Container>
   </q-page>
 </template>
 
 <script>
+import RecentBlogCard from 'components/cards/RecentBlogCard'
 import ArtCarousel from 'components/carousels/ArtCarousel'
 import ProjectCard from 'components/cards/ProjectCard'
 import Container from 'components/Container'
@@ -304,6 +340,7 @@ export default {
     ArtCarousel,
     ProjectCard,
     Flag,
+    RecentBlogCard,
   },
   data () {
     return {
@@ -332,19 +369,19 @@ export default {
       ],
       mgmtTools: [
         {
-          class: 'br-50-p rotate-350 bg-white',
+          class: 'br-50-p rotate-350 bg-white max-w-280',
           image: 'github-logo.svg',
           name: 'Github',
           showLabel: false
         },
         {
-          class: 'br-10-p rotate-10',
+          class: 'br-10-p rotate-10 max-w-280',
           image: 'trello-logo.svg',
           name: 'Trello',
           showLabel: false
         },
         {
-          class: 'br-50-p mt-n-60',
+          class: 'br-50-p mt-n-60 max-w-340',
           image: 'slack-logo.svg',
           name: 'Slack',
           showLabel: false
@@ -616,7 +653,6 @@ export default {
               action: {
                 data: [
                   'honkabet/1.JPG',
-                  'honkabet/2.JPG',
                 ],
                 type: projCardActionTypes.screenshots
               }
@@ -926,6 +962,29 @@ export default {
             }
           ]
         }
+      ],
+      recentBlogs: [
+        {
+          // image: '',
+          header: 'Soon',
+          category: 'Coming',
+          // to: '',
+          date: new Date()
+        },
+        {
+          // image: '',
+          header: 'Soon',
+          category: 'Coming',
+          // to: '',
+          date: new Date()
+        },
+        {
+          // image: '',
+          header: 'Soon',
+          category: 'Coming',
+          // to: '',
+          date: new Date()
+        },
       ]
     }
   },
@@ -998,5 +1057,8 @@ export default {
 }
 .max-w-280 {
   max-width: 280px;
+}
+.max-w-340 {
+  max-width: 340px;
 }
 </style>

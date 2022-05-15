@@ -3,17 +3,53 @@
     <q-header reveal class="bg-navy-blue-1">
       <q-toolbar class="flex flex-center">
         <q-btn
-          v-for="contact, index of contacts"
+          v-for="tab, index of tabs"
           :key="index"
-          :icon="contact.icon"
-          @click="openContact(contact)"
+          :icon="tab.icon"
+          :to="tab.path"
+          @click="openTab(tab)"
           size="lg"
           text-color="white"
           flat
           dense
         >
+          <q-menu
+            v-if="tab.name.toLowerCase() === 'contacts'"
+            transition-show="jump-down"
+            transition-hide="jump-up"
+            class="bg-grad-mint"
+            auto-close
+          >
+            <q-list>
+              <q-item
+                v-for="contact, idx in contacts"
+                @click="openContact(contact)"
+                :key="idx"
+                class="font-pangolin"
+                clickable
+                v-ripple
+              >
+                <q-item-section>
+                  <q-icon
+                    :name="contact.icon"
+                    color="navy-blue"
+                    size="md"
+                  >
+                    <q-tooltip
+                      class="text-body1 bg-grad-mint text-navy-blue shadow-5 font-pangolin"
+                      anchor="center start"
+                      self="center right"
+                    >
+                      {{ contact.name }}
+                    </q-tooltip>
+                  </q-icon>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+
           <q-tooltip class="text-body1 bg-grad-mint text-navy-blue shadow-5 font-pangolin">
-            {{ contact.name }}
+            {{ tab.name }}
           </q-tooltip>
         </q-btn>
       </q-toolbar>
@@ -55,12 +91,43 @@ export default {
   },
   data () {
     return {
-      contacts: [
+      tabs: [
         {
           name: 'Home',
           icon: 'mdi-home',
-          url: 'https://jetszxcki.github.io/Jetszxcki/',
+          path: '/'
         },
+        {
+          name: 'The Aircraft',
+          icon: 'mdi-airplane mdi-rotate-45',
+          path: '/the-aircraft'
+        },
+        {
+          name: 'The Polyglot',
+          icon: 'mdi-head-dots-horizontal',
+          path: '/the-polyglot'
+        },
+        {
+          name: 'The Eco-Friendly',
+          icon: 'mdi-leaf',
+          path: '/the-eco-friendly'
+        },
+        {
+          name: 'The Artist',
+          icon: 'mdi-palette',
+          path: '/the-artist'
+        },
+        {
+          name: 'Blogs',
+          icon: 'mdi-pen',
+          path: '/blogs'
+        },
+        {
+          name: 'Contacts',
+          icon: 'mdi-phone'
+        }
+      ],
+      contacts: [
         {
           name: 'Facebook',
           icon: 'mdi-facebook',
@@ -95,6 +162,15 @@ export default {
     }
   },
   methods: {
+    openTab (tab) {
+      if (tab.name === 'Home') {
+        if (this.$route.path === '/') {
+          smoothScrollTo('the-jet', document)
+        } else {
+          this.$router.push('/')
+        }
+      }
+    },
     openContact (contact) {
       if (contact.name === 'Gmail') {
         copy(contact.url)
