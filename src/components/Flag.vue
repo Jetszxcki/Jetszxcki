@@ -5,7 +5,7 @@
     @mouseout="showLabel = false"
   >
     <div class="col br-30 relative-position">
-      <div class="absolute-center fit flex flex-center hover-label-div" style="z-index: 1" v-show="showLabel">
+      <div class="br-30 absolute-center fit flex flex-center hover-label-div" style="z-index: 1" v-show="showLabel">
         <h3 class="hover-label">{{ language }}</h3>
       </div>
       
@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 .flag {
-  min-width: 280px;
+  min-width: 250px;
   min-height: 170px;
   border-radius: 30px;
 }

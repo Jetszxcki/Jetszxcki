@@ -1,17 +1,17 @@
 <template>
   <q-intersection transition="scale" :transition-duration="1500" once>
-    <q-card class="shadow-10 transition-zoom-1-1 br-30 bg-navy-blue-1 mh-750">
+    <q-card class="shadow-10 transition-zoom-1-1 br-30 bg-navy-blue-1 mh-620">
       <q-card-section class="flex flex-center">
         <q-img
           :src="`logos/${image}`"
           :class="imageClass"
-          width="200px"
+          width="100px"
           class="q-my-md"
         />
       </q-card-section>
 
       <q-card-section class="text-center">
-        <div class="text-h4 font-pangolin text-green-3 q-mb-sm" style="letter-spacing: 2px">
+        <div class="text-h5 font-pangolin text-green-3 q-mb-sm" style="letter-spacing: 2px">
           <b>{{ name }}</b>
         </div>
 
@@ -24,7 +24,7 @@
             :text-color="t.color"
             color="navy-blue"
             class="text-weight-bold"
-            size="lg"
+            size="md"
             square
             dense
           >
@@ -32,8 +32,8 @@
           </q-chip>
         </div>
 
-        <p class="text-white text-h6 q-mb-none">{{ year }}</p>
-        <div class="text-h6 text-center text-faded-grey-2 q-px-md q-py-md" style="line-height: 27px">
+        <p class="text-white text-body1 q-mb-none">{{ year }}</p>
+        <div class="text-body1 text-center text-faded-grey-2 q-px-md q-py-md" style="line-height: 27px">
           {{ description }}
         </div>
       </q-card-section>
@@ -170,7 +170,7 @@ export default {
 .mw-80 {
   min-width: 80vw;
 }
-.mh-750 {
-  min-height: 750px
+.mh-620 {
+  min-height: 620px
 }
 </style>

@@ -28,9 +28,9 @@
           <q-img class="br-30 col full-height" :src="`${imagesDirPrefix}${art.image}`">
             <div class="absolute-bottom row">
               <div class="col-10 q-pr-sm">
-                <div class="text-h4 font-pangolin">
+                <div class="text-h5 font-pangolin">
                   {{ art.title }}
-                  <q-chip square dense :color="art.media.color" text-color="navy-blue" :icon="art.media.icon" size="lg">
+                  <q-chip square dense :color="art.media.color" text-color="navy-blue" :icon="art.media.icon" size="md">
                     {{ art.media.text }}
                   </q-chip>
                 </div>

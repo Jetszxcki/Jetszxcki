@@ -35,9 +35,9 @@
 
     <Container id="the-aircraft" container-class="br-t-30">
       <div class="row q-pb-xl q-px-xl">
-        <div class="col-12 col-md-6 flex flex-center">
+        <div class="col-12 col-md-6 text-center">
           <q-intersection transition="slide-down" :transition-duration="2000" once class="full-width">
-            <q-img src="paradrop.svg" />
+            <q-img src="paradrop.svg" style="max-width: 500px" />
           </q-intersection>
         </div>
         <div class="col-12 col-md-6 flex flex-center">
@@ -79,7 +79,12 @@
         </div>
 
         <div class="col-12 col-md-7">
-          <div class="row h-50 justify-evenly" v-for="flagPair, index in flags" :key="index">
+          <div
+            class="row h-50 justify-evenly"
+            :class="index === 0 ? 'q-mt-md' : ''"
+            v-for="flagPair, index in flags"
+            :key="index"
+          >
             <q-intersection
               v-for="flag, idx in flagPair"
               :key="idx"
@@ -149,7 +154,7 @@
           <q-intersection transition="slide-down" :transition-duration="1000" once>
             <h2 class="text-grad-mint q-mb-none">
               Eco-Friendly Plane
-            </h2>                      
+            </h2>
             <h5 class="q-pr-lg text-faded-grey-2">
               Unlike other planes, I am fueled by fries and mango shake.
 
@@ -160,9 +165,9 @@
           </q-intersection>
         </div>
 
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-md-7 text-center">
           <q-intersection transition="scale" :transition-duration="1000" once>
-           <q-img src="food-and-study.svg" />
+            <q-img src="food-and-study.svg" style="max-width: 500px" />
           </q-intersection>
         </div>
       </div>
@@ -170,23 +175,24 @@
       <div class="row reverse-wrap flex-center">
         <div class="col-12 col-md-6 q-pt-xl q-px-xl">
           <div class="row justify-evenly">
-            <q-img
-              :src="`logos/${mgmtTool.image}`"
-              v-for="mgmtTool, index in mgmtTools"
-              :key="`tool-card-${index}`"
-              :class="mgmtTool.class"
-              class="transition-up-20"
-              :width="$q.screen.xs ? '200px' : ''"
-              @mouseover="mgmtTool.showLabel = true"
-              @mouseout="mgmtTool.showLabel = false"
-             >
-              <div
-                v-show="mgmtTool.showLabel"
-                class="br-30 bg-dark absolute-center fit flex flex-center hover-label-div"
+            <div class="col flex flex-center">
+              <q-img
+                :src="`logos/${mgmtTool.image}`"
+                v-for="mgmtTool, index in mgmtTools"
+                :key="`tool-card-${index}`"
+                :class="mgmtTool.class"
+                class="transition-up-20"
+                @mouseover="mgmtTool.showLabel = true"
+                @mouseout="mgmtTool.showLabel = false"
               >
-                <h3 class="hover-label">{{ mgmtTool.name }}</h3>
-              </div>
-             </q-img>
+                <div
+                  v-show="mgmtTool.showLabel"
+                  class="absolute-center fit flex flex-center hover-label-div"
+                >
+                  <h3 class="hover-label">{{ mgmtTool.name }}</h3>
+                </div>
+              </q-img>
+            </div>
           </div>
         </div>
 
@@ -210,18 +216,18 @@
       </div>
     </Container>
 
-    <Container id="the-artist" container-class="q-pt-xl bg-grey-2">
+    <Container id="the-artist" container-class="q-pt-xl bg-grey-3">
       <div class="text-center">
-        <h1 class="q-px-xl text-dark">The Artist</h1>
+        <h2 class="q-px-xl text-dark">The Artist</h2>
         <q-intersection transition="jump-down" :transition-duration="1000" once>
-          <h4 class="q-px-xl q-mb-none">
+          <h5 class="q-px-xl q-mb-none">
             Unable to fly, I can't use my creativity on combat.
-          </h4>
+          </h5>
         </q-intersection>
         <q-intersection transition="jump-up" :transition-duration="1000" once>
-          <h4 class="text-faded-grey-1 q-mt-none q-px-xl">
+          <h5 class="text-faded-grey-1 q-mt-none q-px-xl">
             Instead, I diverted my imagination unto arts.
-          </h4>
+          </h5>
         </q-intersection>
       </div>
 
@@ -233,7 +239,9 @@
       </div>
 
       <q-intersection transition="slide-up" :transition-duration="2000" once>
-        <q-img src="art-materials.svg" />
+        <div class="row flex-center">
+          <q-img src="art-materials.svg" style="max-width: 800px" />
+        </div>
       </q-intersection>
 
       <ArtCarousel />
@@ -278,13 +286,15 @@
           :description="project.description"
           :sources="project.sources"
           :tech="project.tech"
-          style="width:410px"
+          style="width:350px"
         />
       </div>
     </Container>
 
     <Container id="blogs" container-class="text-center q-pb-md q-px-xl">
-      <h2>''Talking to oneself is healthy for the mind''</h2>
+      <q-intersection transition="slide-down" :transition-duration="2000" once>
+        <h2>''Talking to oneself is healthy for the mind''</h2>
+      </q-intersection>
       <h5 class="q-mb-xl">
         I think a lot. Usually, I express my thoughts through writing or talking to myself, alone in a room (I know... I'm crazy).
         <span class="text-faded-grey-1">
@@ -306,14 +316,14 @@
         <q-btn
           label="See More"
           icon-right="mdi-arrow-right"
-          text-color="navy-blue-1"
+          text-color="white"
           class="q-mt-md"
-          color="grey-4"
+          color="navy-blue-1"
           to="/blogs"
           size="xl"
           rounded
           unelevated
-          disable
+          disabled
         />
       </q-intersection>
     </Container>
@@ -369,19 +379,19 @@ export default {
       ],
       mgmtTools: [
         {
-          class: 'br-50-p rotate-350 bg-white max-w-280',
+          class: 'br-50-p rotate-350 bg-white max-w-200',
           image: 'github-logo.svg',
           name: 'Github',
           showLabel: false
         },
         {
-          class: 'br-10-p rotate-10 max-w-280',
+          class: 'br-10-p rotate-10 max-w-200',
           image: 'trello-logo.svg',
           name: 'Trello',
           showLabel: false
         },
         {
-          class: 'br-50-p mt-n-60 max-w-340',
+          class: 'br-50-p mt-n-60 max-w-220',
           image: 'slack-logo.svg',
           name: 'Slack',
           showLabel: false
@@ -1055,10 +1065,10 @@ export default {
   font-size: 90px;
   line-height: 90%;
 }
-.max-w-280 {
-  max-width: 280px;
+.max-w-200 {
+  max-width: 200px;
 }
-.max-w-340 {
-  max-width: 340px;
+.max-w-220 {
+  max-width: 220px;
 }
 </style>

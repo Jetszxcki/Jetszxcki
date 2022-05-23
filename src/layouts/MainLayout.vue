@@ -19,6 +19,7 @@
             transition-hide="jump-up"
             class="bg-grad-mint"
             auto-close
+            :offset="[0, 3]"
           >
             <q-list>
               <q-item

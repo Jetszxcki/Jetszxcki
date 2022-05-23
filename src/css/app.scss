@@ -229,16 +229,10 @@ h1, h2, h3 {
 .hover-label {
   color: white;
   text-align: center;
-  font-family: 'Quicksand';
-  text-shadow:
-   -3px -3px 0 $navy-blue,  
-    3px -3px 0 $navy-blue,
-    -3px 3px 0 $navy-blue,
-     3px 3px 0 $navy-blue;
+  font-family: 'Akshar';
 }
 .hover-label-div {
   background-color: $dark;
-  border-radius: 30px;
   opacity: 0.5;
 }
 
