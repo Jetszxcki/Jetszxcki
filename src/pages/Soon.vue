@@ -20,7 +20,7 @@
     </div>
 
     <q-img
-      src="soon.svg"
+      src="coding.svg"
       class="absolute-bottom"
       style="min-height: 220px"
     />

@@ -2,7 +2,7 @@
   <q-intersection transition="scale" :transition-duration="2000" once>
     <q-card
       id="recent-blog-card"
-      class="shadow-0 bg-grey-3 br-30 q-my-md transition-zoom-1-05"
+      class="shadow-0 bg-navy-blue-1 br-30 q-my-md transition-zoom-1-05"
     >
       <q-card-section horizontal>
         <q-img
@@ -12,8 +12,8 @@
         <q-card-section class="col-8 flex flex-center q-my-md">
           <div class="text-left full-width font-akshar q-px-md">
             <p class="text-h5 text-faded-grey-1">{{ category }}</p>
-            <p class="text-h4 text-weight-bolder font-pangolin hyphen-word-wrap">{{ header }}</p>
-            <div class="text-h6 font-quicksand">
+            <p class="text-h4 text-weight-bolder font-pangolin text-white hyphen-word-wrap">{{ header }}</p>
+            <div class="text-subtitle1 font-quicksand text-faded-grey-2">
               {{ formattedDate }}
               <q-icon
                 name="mdi-circle"
@@ -21,7 +21,7 @@
                 class="q-mx-md"
                 size="1px"
               />
-              <span class="text-subtitle1 text-faded-grey-1">
+              <span class="text-subtitle1">
                 {{ readTime }}
               </span>
             </div>

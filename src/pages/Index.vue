@@ -42,8 +42,8 @@
         </div>
         <div class="col-12 col-md-6 flex flex-center">
           <q-intersection transition="scale" :transition-duration="1000" once>
-            <h2 class="q-mb-none text-dark">An Aircraft on Foot</h2>
-            <h5 class="text-faded-grey-1">
+            <h3 class="q-mb-none text-dark">An Aircraft on Foot</h3>
+            <h6 class="text-faded-grey-1">
               <span class="text-navy-blue">Is it a bird, is it a plane? --- No, it's a Jet!</span>
               <br>
 
@@ -56,7 +56,7 @@
               </a>
 
               for almost 3 years now.
-            </h5>
+            </h6>
           </q-intersection>
         </div>
       </div>
@@ -65,17 +65,17 @@
     <Container id="the-polyglot" container-class="bg-navy-blue br-t-30 q-pa-xl">
       <div class="row">
         <div class="col-12 col-md-5 q-pr-lg q-pb-lg flex flex-center">
-          <h2 class="q-mb-none q-mt-lg q-py-xs text-grad-mint full-width">
+          <h3 class="q-mb-none q-mt-lg q-py-xs text-grad-mint full-width">
             A Polyglot In-Progress
-          </h2>
-          <h4 class="full-width q-mb-none text-faded-grey-2">
+          </h3>
+          <h5 class="full-width q-mb-none text-faded-grey-2">
             Coincidence?
-          </h4>
-          <h5 class="text-white q-mb-none q-mt-md">
-            Having it heard from a video game, the French accent sparked my interest towards language learning.
-            Currently at my 7th month of study, I can fairly speak and understand French,
-            and a little bit of Russian.
           </h5>
+          <h6 class="text-white q-mb-none q-mt-md">
+            Having it heard from a video game, the French accent sparked my interest towards language learning.
+            Currently at my 8th month of study, I can fairly speak and understand French,
+            and a little bit of Russian.
+          </h6>
         </div>
 
         <div class="col-12 col-md-7">
@@ -117,7 +117,7 @@
               <q-btn
                 push
                 no-caps
-                size="xl"
+                size="lg"
                 color="navy-blue-1"
                 class="font-pangolin full-width"
                 :text-color="pl.textColor"
@@ -128,7 +128,7 @@
           </div>
         </div>
         <div class="col-12 col-md-4 q-pb-lg flex flex-center">
-          <h5 class="text-white q-mb-none">
+          <h6 class="text-white q-mb-none">
             <span class="text-faded-grey-2">
               Born with the blood of an aircraft,
               I can also read & write computer languages!
@@ -143,32 +143,31 @@
             </span>
 
             on frontend languages as well.
-          </h5>
+          </h6>
         </div>
       </div>
     </Container>
 
-    <Container id="the-eco-friendly" container-class="q-py-xl bg-navy-blue-1">
+    <Container id="the-eco-friendly" container-class="q-py-xl br-b-30 bg-navy-blue-1">
       <div class="row q-px-xl">
         <div class="col-12 col-md-5 flex flex-center">
           <q-intersection transition="slide-down" :transition-duration="1000" once>
-            <h2 class="text-grad-mint q-mb-none">
+            <h3 class="text-grad-mint q-mb-none">
               Eco-Friendly Plane
-            </h2>
-            <h5 class="q-pr-lg text-faded-grey-2">
+            </h3>
+            <h6 class="q-pr-lg text-faded-grey-2">
               Unlike other planes, I am fueled by fries and mango shake.
 
               <span class="text-white">
-                As a clean and neat jet, I like to keep things tidy and organized.
+                I like nature, and prefer going/living on places with abundance of shrubs and trees,
+                rather than capital cities with crowdy skyscrapers.
               </span>
-            </h5>
+            </h6>
           </q-intersection>
         </div>
 
         <div class="col-12 col-md-7 text-center">
-          <q-intersection transition="scale" :transition-duration="1000" once>
-            <q-img src="food-and-study.svg" style="max-width: 500px" />
-          </q-intersection>
+          <q-img src="park.svg" style="max-width: 500px" />
         </div>
       </div>
 
@@ -204,30 +203,34 @@
           </q-intersection>
 
           <q-intersection transition="slide-up" :transition-duration="1000" once>
-            <h5 class="text-faded-grey-2">
-              Code and task management is key to smooth progress.
+            <h6 class="text-faded-grey-2">
+              Whether at work or simply at home, I tend to keep things organized and clean.
               <span class="text-white">
-                Among these are tools that I've used for task organization,
-                team communication and code safety.
+                Just like there are shelves for books and closets for clothes, 
+                program and project files also needs a home for safety.
               </span>
-            </h5>
+            </h6>
             </q-intersection>
         </div>
       </div>
     </Container>
 
-    <Container id="the-artist" container-class="q-pt-xl bg-grey-3">
+    <Container id="the-artist" container-class="q-pt-xl">
       <div class="text-center">
         <h2 class="q-px-xl text-dark">The Artist</h2>
         <q-intersection transition="jump-down" :transition-duration="1000" once>
-          <h5 class="q-px-xl q-mb-none">
-            Unable to fly, I can't use my creativity on combat.
-          </h5>
+          <h6 class="text-faded-grey-1 q-mb-none q-px-xl">
+            <span class="strike">Radars</span>. 
+            <span class="strike">Trajectories</span>. 
+            <span class="strike">Coordinates</span>. 
+            <span class="strike">Missiles</span>. 
+            <span class="strike">Angles</span>.
+          </h6>
         </q-intersection>
         <q-intersection transition="jump-up" :transition-duration="1000" once>
-          <h5 class="text-faded-grey-1 q-mt-none q-px-xl">
-            Instead, I diverted my imagination unto arts.
-          </h5>
+          <h6 class="q-px-xl q-mt-none">
+            Colors. Pencils. Brushes. Vector Paintings. Layouts.
+          </h6>
         </q-intersection>
       </div>
 
@@ -250,21 +253,23 @@
     <Container container-class="bg-navy-blue q-pb-xl br-b-30 q-mb-xl">
       <div class="row text-center q-mt-xl">
         <div class="col">
-          <h2 class="text-faded-grey-2 q-px-xl">
+          <h3 class="text-faded-grey-2 q-px-xl">
             Softwares are art too.
-          </h2>
+          </h3>
 
-          <q-intersection transition="jump-down" :transition-duration="1000" once>
-            <h5 class="q-mb-none q-px-xl text-white">
-              There is beauty in data handling and user interface designing.
-            </h5>
-          </q-intersection>
-          <q-intersection transition="jump-up" :transition-duration="1000" once>
-            <h5 class="text-faded-grey-2 q-px-xl q-mt-none">
-              Here are some projects I mainly contributed to:
-            </h5>
-          </q-intersection>
-
+          <div :class="dynamicContentTextClass">
+            <q-intersection transition="jump-down" :transition-duration="1000" once>
+              <h6 class="q-mb-none q-px-xl text-faded-grey-2">
+                Art can come in many forms --- paintings, photoshop and software development!
+              </h6>
+            </q-intersection>
+            <q-intersection transition="jump-up" :transition-duration="1000" once>
+              <h6 class="text-white q-px-xl q-mt-none">
+                Like most arts, it has the usual designing aspects, but software development takes it a step further
+                with data handling and modeling, which I consider an art.
+              </h6>
+            </q-intersection>
+          </div>
         </div>
       </div>
 
@@ -293,14 +298,15 @@
 
     <Container id="blogs" container-class="text-center q-pb-md q-px-xl">
       <q-intersection transition="slide-down" :transition-duration="2000" once>
-        <h2>''Talking to oneself is healthy for the mind''</h2>
+        <h3>''Talking to oneself is healthy for the mind''</h3>
       </q-intersection>
-      <h5 class="q-mb-xl">
-        I think a lot. Usually, I express my thoughts through writing or talking to myself, alone in a room (I know... I'm crazy).
+      <h6 class="q-mb-xl" :class="dynamicContentTextClass">
+        I think a lot about random things, and it's not easy for me to keep my thoughts with myself.
+        Thus, I express them through writing or talking to myself.
         <span class="text-faded-grey-1">
-          Dwell across my thoughts and know more about me mentally on my blogs.
+          Dwell across my thoughts and know more about what I think of on my blogs.
         </span>
-      </h5>
+      </h6>
 
       <RecentBlogCard
         v-for="rb, index in recentBlogs"
@@ -1018,6 +1024,13 @@ export default {
   mounted () {
     this.startTypingAnimation()
   },
+  computed: {
+    dynamicContentTextClass () {
+      const screen = this.$q.screen
+      const isNotSmallDevice = screen.xl || screen.lg || screen.md
+      return isNotSmallDevice ? 'q-px-xl q-mx-xl' : ''
+    }
+  },
   methods: {
     startTypingAnimation () {
       let i = 0;
@@ -1070,5 +1083,26 @@ export default {
 }
 .max-w-220 {
   max-width: 220px;
+}
+@keyframes strike{
+  0%   { width: 0; }
+  100% { width: 100%; }
+}
+.strike {
+  position: relative;
+}
+.strike::after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: $faded-grey-1;
+  animation-name: strike;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
 }
 </style>

@@ -20,7 +20,7 @@
             </div>
 
             <div class="col-12 col-md-3 q-mt-xl">
-              <div class="text-h4 text-center font-pangolin q-mb-md text-weight-bolder">
+              <div class="text-h5 text-center font-pangolin q-mb-md text-weight-bolder">
                 Explore
               </div>
               <div
@@ -42,7 +42,7 @@
             </div>
 
             <div class="col-12 col-md-3 q-mt-xl">
-              <div class="text-h4 text-center font-pangolin q-mb-md text-weight-bolder">
+              <div class="text-h5 text-center font-pangolin q-mb-md text-weight-bolder">
                 Follow
               </div>
               <div
@@ -65,7 +65,7 @@
             </div>
 
             <div class="col-12 col-md-3 q-mt-xl">
-              <div class="text-h4 text-center font-pangolin q-mb-md text-weight-bolder">
+              <div class="text-h5 text-center font-pangolin q-mb-md text-weight-bolder">
                 Contacts
               </div>
               <div class="row flex-center text-h6">skyjeth137120@gmail.com</div>
