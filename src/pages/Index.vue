@@ -52,10 +52,9 @@
               for almost 3 years now, currently working for a crypto-oriented company,
 
               <a href="https://scibizinformatics.com/#/about" target="_blank">
-                Scibiz Informatics,
+                Scibiz Informatics
               </a>
-
-              for almost 3 years now.
+              .
             </h6>
           </q-intersection>
         </div>
