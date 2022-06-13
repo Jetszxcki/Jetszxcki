@@ -47,7 +47,7 @@
     </div>
 
     <q-img
-      src="trees.svg"
+      src="buoy.svg"
       class="absolute-bottom"
       style="min-height: 200px;"
     />

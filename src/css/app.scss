@@ -71,6 +71,7 @@ h1, h2, h3 {
 }
 .font-pangolin {
   font-family: 'Pangolin';
+  letter-spacing: 1px;
 }
 
 // BACKGROUND COLORS
@@ -86,6 +87,9 @@ h1, h2, h3 {
 }
 .bg-mint-1 {
   background-color: $mint-1 !important;
+}
+.bg-mint-2 {
+  background-color: $mint-2 !important;
 }
 .bg-grad-red {
   background: linear-gradient(
@@ -126,6 +130,9 @@ h1, h2, h3 {
 .text-mint-1 {
   color: $mint-1 !important;
 }
+.text-mint-2 {
+  color: $mint-2 !important;
+}
 
 // TRANSITIONS/ANIMATIONS
 
@@ -156,6 +163,9 @@ h1, h2, h3 {
 .br-10 {
   border-radius: 10px;
 }
+.br-20 {
+  border-radius: 20px;
+}
 .br-30 {
   border-radius: 30px;
 }
@@ -181,6 +191,18 @@ h1, h2, h3 {
   border-bottom-left-radius: 30px !important;
   border-bottom-right-radius: 30px !important;
 }
+.br-t-20 {
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+}
+.br-r-20 {
+  border-bottom-right-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+}
+.br-b-20 {
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
 
 // TRANSFORMS
 
@@ -202,6 +224,9 @@ h1, h2, h3 {
 
 // MARGINS, PADDINGS
 
+.mt-n-20 {
+  margin-top: -20px;
+}
 .mt-n-60 {
   margin-top: -60px;
 }
@@ -234,6 +259,10 @@ h1, h2, h3 {
 .hover-label-div {
   background-color: $dark;
   opacity: 0.5;
+}
+
+.separator {
+  width: 250px;
 }
 
 // DEV TESTING CSS (borders for testing layouts, dimensions, margins, paddings testing)

@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <Container id="the-jet" class="q-pt-xl bg-navy-blue-1">
+    <Container id="home" class="q-pt-xl bg-navy-blue-1">
       <q-intersection transition="slide-down" :transition-duration="1000" once>
         <div class="row flex-center">
           <h6 class="text-mint q-mb-none font-pangolin">
@@ -19,21 +19,21 @@
 
       <div class="row flex-center">
         <q-separator
-          color="white"
-          class="q-mb-lg intro-separator"
+          color="faded-grey-2"
+          class="q-mb-lg separator"
         />
       </div>
 
       <div class="row flex-center text-center">
-        <h4 id="intro-subtext" class=" q-mt-none q-mb-xl text-white q-px-lg">
+        <h4 id="intro-subtext" class="font-pangolin q-mt-none q-mb-xl text-white q-px-lg">
           &nbsp; <!-- filler only, before animation kicks in -->
         </h4>
       </div>
     </Container>
       
-    <q-img src="clouds.svg" />
+    <q-img src="clouds.svg" style="min-height: 100px" />
 
-    <Container id="the-aircraft" container-class="br-t-30">
+    <Container container-class="br-t-30">
       <div class="row q-pb-xl q-px-xl">
         <div class="col-12 col-md-6 text-center">
           <q-intersection transition="slide-down" :transition-duration="2000" once class="full-width">
@@ -48,8 +48,8 @@
               <br>
 
               Hi! I'm an average-sized aircraft currently stationed in the Philippines.
-              Incapable of flight, I create apps and programs as a software developer,
-              and currently work in a crypto-oriented company,
+              Incapable of flight, I have been creating apps and programs as a software developer
+              for almost 3 years now, currently working for a crypto-oriented company,
 
               <a href="https://scibizinformatics.com/#/about" target="_blank">
                 Scibiz Informatics,
@@ -62,19 +62,19 @@
       </div>
     </Container>
 
-    <Container id="the-polyglot" container-class="bg-navy-blue br-t-30 q-pa-xl">
+    <Container container-class="bg-navy-blue br-t-30 q-pa-xl">
       <div class="row">
         <div class="col-12 col-md-5 q-pr-lg q-pb-lg flex flex-center">
           <h3 class="q-mb-none q-mt-lg q-py-xs text-grad-mint full-width">
             A Polyglot In-Progress
           </h3>
-          <h5 class="full-width q-mb-none text-faded-grey-2">
+          <h5 class="full-width q-mb-none font-pangolin text-faded-grey-2">
             Coincidence?
           </h5>
           <h6 class="text-white q-mb-none q-mt-md">
             Having it heard from a video game, the French accent sparked my interest towards language learning.
             Currently at my 8th month of study, I can fairly speak and understand French,
-            and a little bit of Russian.
+            while alternately learning it together with Japanese.
           </h6>
         </div>
 
@@ -148,7 +148,7 @@
       </div>
     </Container>
 
-    <Container id="the-eco-friendly" container-class="q-py-xl br-b-30 bg-navy-blue-1">
+    <Container container-class="q-py-xl br-b-30 bg-navy-blue-1">
       <div class="row q-px-xl">
         <div class="col-12 col-md-5 flex flex-center">
           <q-intersection transition="slide-down" :transition-duration="1000" once>
@@ -167,7 +167,7 @@
         </div>
 
         <div class="col-12 col-md-7 text-center">
-          <q-img src="park.svg" style="max-width: 500px" />
+          <q-img src="park.svg" style="max-width: 550px" />
         </div>
       </div>
 
@@ -180,7 +180,7 @@
                 v-for="mgmtTool, index in mgmtTools"
                 :key="`tool-card-${index}`"
                 :class="mgmtTool.class"
-                class="transition-up-20"
+                class="transition-up-20 shadow-10"
                 @mouseover="mgmtTool.showLabel = true"
                 @mouseout="mgmtTool.showLabel = false"
               >
@@ -197,7 +197,7 @@
 
         <div class="col-12 col-md-6 q-pt-xl q-px-xl">
           <q-intersection transition="slide-down" :transition-duration="1000" once>
-            <h3 class="q-py-xs hyphen-word-wrap text-faded-grey-2">
+            <h3 class="q-py-xs hyphen-word-wrap font-pangolin text-faded-grey-2">
               ''With great codebase, <br>comes great responsibility.''
             </h3>
           </q-intersection>
@@ -215,7 +215,7 @@
       </div>
     </Container>
 
-    <Container id="the-artist" container-class="q-pt-xl">
+    <Container container-class="q-pt-xl">
       <div class="text-center">
         <h2 class="q-px-xl text-dark">The Artist</h2>
         <q-intersection transition="jump-down" :transition-duration="1000" once>
@@ -237,7 +237,7 @@
       <div class="row flex-center q-mb-lg">
         <q-separator
           color="grey"
-          class="q-mb-lg intro-separator"
+          class="q-mb-lg separator"
         />
       </div>
 
@@ -253,7 +253,7 @@
     <Container container-class="bg-navy-blue q-pb-xl br-b-30 q-mb-xl">
       <div class="row text-center q-mt-xl">
         <div class="col">
-          <h3 class="text-faded-grey-2 q-px-xl">
+          <h3 class="text-grad-mint q-px-xl">
             Softwares are art too.
           </h3>
 
@@ -275,8 +275,8 @@
 
       <div class="row flex-center q-mb-lg">
         <q-separator
-          color="grey"
-          class="q-mb-lg intro-separator"
+          color="faded-grey-2"
+          class="q-mb-lg separator"
         />
       </div>
 
@@ -296,40 +296,39 @@
       </div>
     </Container>
 
-    <Container id="blogs" container-class="text-center q-pb-md q-px-xl">
+    <Container container-class="text-center q-pb-md q-px-xl">
       <q-intersection transition="slide-down" :transition-duration="2000" once>
         <h3>''Talking to oneself is healthy for the mind''</h3>
       </q-intersection>
       <h6 class="q-mb-xl" :class="dynamicContentTextClass">
-        I think a lot about random things, and it's not easy for me to keep my thoughts with myself.
-        Thus, I express them through writing or talking to myself.
+        I think a lot about random things and expresses them through writing or talking to myself.
         <span class="text-faded-grey-1">
-          Dwell across my thoughts and know more about what I think of on my blogs.
+          Dwell across my thoughts and know more about me on my blogs.
         </span>
       </h6>
 
-      <RecentBlogCard
+      <BlogCard
         v-for="rb, index in recentBlogs"
         :key="index"
-        :to="rb.to"
-        :category="rb.category"
         :header="rb.header"
-        :image="rb.image"
+        :img="rb.image"
         :date="rb.date"
+        :duration="rb.duration"
+        :to="rb.to"
+        horizontal
       />
 
       <q-intersection transition="slide-up" :transition-duration="1000" once>
         <q-btn
           label="See More"
           icon-right="mdi-arrow-right"
-          text-color="white"
-          class="q-mt-md"
-          color="navy-blue-1"
+          text-color="navy-blue-1"
+          color="grey-4"
+          class="q-mt-xl"
           to="/blogs"
-          size="xl"
+          size="lg"
           rounded
           unelevated
-          disabled
         />
       </q-intersection>
     </Container>
@@ -337,9 +336,9 @@
 </template>
 
 <script>
-import RecentBlogCard from 'components/cards/RecentBlogCard'
 import ArtCarousel from 'components/carousels/ArtCarousel'
 import ProjectCard from 'components/cards/ProjectCard'
+import BlogCard from 'components/cards/BlogCard'
 import Container from 'components/Container'
 import Flag from 'components/Flag'
 
@@ -356,7 +355,7 @@ export default {
     ArtCarousel,
     ProjectCard,
     Flag,
-    RecentBlogCard,
+    BlogCard,
   },
   data () {
     return {
@@ -374,18 +373,18 @@ export default {
         ],
         [
           {
-            language: 'French',
+            language: 'Français',
             image: 'france.svg'
           },
           {
-            language: 'Russian',
-            image: 'russia.svg'
+            language: '日本語',
+            image: 'japan.svg'
           }
         ]
       ],
       mgmtTools: [
         {
-          class: 'br-50-p rotate-350 bg-white max-w-200',
+          class: 'br-50-p rotate-350 max-w-200',
           image: 'github-logo.svg',
           name: 'Github',
           showLabel: false
@@ -397,7 +396,7 @@ export default {
           showLabel: false
         },
         {
-          class: 'br-50-p mt-n-60 max-w-220',
+          class: 'br-50-p max-w-200 mt-n-20',
           image: 'slack-logo.svg',
           name: 'Slack',
           showLabel: false
@@ -981,26 +980,12 @@ export default {
       ],
       recentBlogs: [
         {
-          // image: '',
-          header: 'Soon',
-          category: 'Coming',
-          // to: '',
-          date: new Date()
-        },
-        {
-          // image: '',
-          header: 'Soon',
-          category: 'Coming',
-          // to: '',
-          date: new Date()
-        },
-        {
-          // image: '',
-          header: 'Soon',
-          category: 'Coming',
-          // to: '',
-          date: new Date()
-        },
+          header: 'The Art of Mimicry: A Unique Skill Through Imitation',
+          to: '/blogs/arts/the-art-of-mimicry',
+          image: 'arts/the-art-of-mimicry/chameleon.svg',
+          duration: 3,
+          date: new Date('June 13, 2022')
+        }
       ]
     }
   },
@@ -1071,20 +1056,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.intro-separator {
-  width: 250px;
-}
 .full-name {
-  font-size: 90px;
+  font-size: 85px;
   line-height: 90%;
+}
+.max-w-160 {
+  max-width: 160px;
 }
 .max-w-200 {
   max-width: 200px;
 }
-.max-w-220 {
-  max-width: 220px;
-}
-@keyframes strike{
+@keyframes strike {
   0%   { width: 0; }
   100% { width: 100%; }
 }

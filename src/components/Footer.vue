@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-img src="ocean.svg" style="min-height: 200px" />
+    <q-img id="footer-img" src="ocean.svg" style="min-height: 200px" />
 
     <div class="bg-navy-blue-1 row q-px-xl q-pb-xl text-faded-grey-2">
       <div class="col">
@@ -12,9 +12,9 @@
                   round
                   flat
                   class="home-btn-footer"
-                  @click="scrollTo('the-jet')"
+                  @click="scrollOrRedirectTo('')"
                 >
-                  <q-img src="logos/jet-logo-1.svg" />
+                  <q-img src="logos/jet-logo-dark.svg" />
                 </q-btn>
               </q-intersection>
             </div>
@@ -29,7 +29,7 @@
                 :key="index"
               >
                 <q-btn
-                  @click="scrollTo(section.to)"
+                  @click="scrollOrRedirectTo(section.to)"
                   :label="section.name"
                   class="col-8 q-my-xs"
                   padding="none"
@@ -112,19 +112,19 @@ export default {
       sections: [
         {
           name: 'The Aircraft',
-          to: 'the-aircraft'
+          to: 'coming-soon'
         },
         {
           name: 'The Polyglot',
-          to: 'the-polyglot'
+          to: 'coming-soon'
         },
         {
           name: 'The Eco-Friendly',
-          to: 'the-eco-friendly'
+          to: 'coming-soon'
         },
         {
           name: 'The Artist',
-          to: 'the-artist'
+          to: 'coming-soon'
         },
         {
           name: 'Blogs',
@@ -134,8 +134,13 @@ export default {
     }
   },
   methods: {
-    scrollTo (id) {
-      smoothScrollTo(id, document)
+    scrollOrRedirectTo (id) {
+      if (this.$route.path.substring(1) === id) {
+        if (id === '') id = 'home'
+        smoothScrollTo(id, document)
+      } else {
+        this.$router.push(`/${id}`)
+      }
     }
   }
 }
@@ -143,7 +148,7 @@ export default {
 
 <style scoped>
 .home-btn-footer {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 </style>

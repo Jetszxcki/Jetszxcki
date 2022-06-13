@@ -5,7 +5,7 @@
       transition-next="slide-left"
       control-text-color="mint-1"
       control-color="mint-1"
-      control-type="push"
+      control-type="flat"
       class="bg-navy-blue-1 br-t-30 q-pa-md"
       height="550px"
       @mouseenter="autoplay = false"
@@ -30,7 +30,7 @@
               <div class="col-10 q-pr-sm">
                 <div class="text-h5 font-pangolin">
                   {{ art.title }}
-                  <q-chip square dense :color="art.media.color" text-color="navy-blue" :icon="art.media.icon" size="md">
+                  <q-chip square dense :ripple="false" :color="art.media.color" text-color="navy-blue" :icon="art.media.icon" size="md">
                     {{ art.media.text }}
                   </q-chip>
                 </div>

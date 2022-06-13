@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flag row"
+    class="flag row shadow-10"
     @mouseover="showLabel = true"
     @mouseout="showLabel = false"
   >

@@ -31,4 +31,28 @@ function smoothScrollTo (id, document) {
   setVerticalScrollPosition(target, offset, 1000)
 }
 
-export { copy, smoothScrollTo }
+function formatDate (date) {
+  const month = date.toLocaleString('default', { month: 'short' })
+  const day = date.getDate()
+  const year = date.getFullYear()
+  return `${month} ${day}, ${year}`
+}
+
+function formatDuration (duration) {
+  let unit = 'min'
+  let time = duration
+
+  if (duration >= 60) {
+    unit = 'hr'
+    time = Math.round(duration / 60)
+  }
+
+  return `${time} ${unit} read`
+}
+
+export {
+  copy,
+  smoothScrollTo,
+  formatDate,
+  formatDuration
+}

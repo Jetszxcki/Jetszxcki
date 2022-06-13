@@ -11,7 +11,7 @@
       </q-card-section>
 
       <q-card-section class="text-center">
-        <div class="text-h5 font-pangolin text-green-3 q-mb-sm" style="letter-spacing: 2px">
+        <div class="text-h5 font-pangolin text-grad-mint q-mb-sm">
           <b>{{ name }}</b>
         </div>
 
@@ -22,8 +22,9 @@
             :key="index"
             :icon="t.icon"
             :text-color="t.color"
+            :ripple="false"
             color="navy-blue"
-            class="text-weight-bold"
+            class="text-weight-bold font-pangolin q-pa-sm"
             size="md"
             square
             dense
@@ -46,7 +47,7 @@
           :key="index"
           @click="clickAction(source.action)"
           :icon="source.icon"
-          color="green-3"
+          color="grad-mint"
           size="lg"
           flat
           round
