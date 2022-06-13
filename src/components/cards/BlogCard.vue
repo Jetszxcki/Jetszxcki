@@ -1,7 +1,7 @@
 <template>
   <q-card
     @click="$router.push(to)"
-    class="bg-navy-blue shadow-10 br-20 q-pa-none full-width full-height flex flex-center transition-zoom-1-05"
+    class="full-width full-height bg-navy-blue shadow-10 br-20 q-pa-none flex flex-center transition-zoom-1-05"
     :style="isBgImg ? bgImgClass : ''"
   >
     <q-card-section :horizontal="horizontal && !$q.screen.xs" class="full-width q-pa-none" :class="alignCenter ? 'text-center': 'text-left'">
@@ -11,11 +11,13 @@
         :src="`blogs/${img}`"
       />
       <div class="col q-px-xl">
-        <div class="font-akshar text-grad-mint hyphen-word-wrap">
-          <h3 v-if="header_3" class="text-weight-bolder" :class="headerClass">{{ header }}</h3>
-          <h4 v-if="header_4" class="text-weight-bolder" :class="headerClass">{{ header }}</h4>
-          <h5 v-if="header_5" class="text-weight-bolder" :class="headerClass">{{ header }}</h5>
-        </div>
+        <q-intersection once transition="scale" :transition-duration="1500">
+          <div class="font-akshar text-grad-mint hyphen-word-wrap">
+            <h3 v-if="header_3" class="text-weight-bolder" :class="headerClass">{{ header }}</h3>
+            <h4 v-if="header_4" class="text-weight-bolder" :class="headerClass">{{ header }}</h4>
+            <h5 v-if="header_5" class="text-weight-bolder" :class="headerClass">{{ header }}</h5>
+          </div>
+        </q-intersection>
         <div v-if="date" class="font-quicksand q-mb-xl text-subtitle1 text-faded-grey-2">
           {{ formatDate(date) }}
 

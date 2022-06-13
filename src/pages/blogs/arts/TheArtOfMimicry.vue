@@ -41,7 +41,7 @@
       <div class="col-12 col-md-8">
         <q-img
           :src="`${mainImgPath}/github-ss.png`"
-          class="shadow-2"
+          class="shadow-24 br-20"
         />
       </div>
     </div>
@@ -63,12 +63,12 @@
       <div class="col-12 col-md-8">
         <q-img
           :src="`${mainImgPath}/duolingo-ss.png`"
-          class="shadow-2"
+          class="shadow-24 br-20"
         />
       </div>
     </div>
 
-    <h6>
+    <h6 class="q-pt-xl">
       Similar traits can be found on this site when compared to the mentioned sites above,
       but the self-made images and difference in font style/layouts contributed to the overall
       authenticity of the art.

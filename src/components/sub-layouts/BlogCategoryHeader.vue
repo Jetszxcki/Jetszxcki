@@ -1,7 +1,13 @@
 <template>
   <div class="q-pa-xl bg-navy-blue-1 relative-position">
-    <h2 class="q-mb-sm text-grad-mint q-py-xs">{{ header }}</h2>
-    <h5 class="q-mt-sm q-mb-xl text-white">{{ subHeader }}</h5>
+    <q-intersection transition="slide-right" :transition-duration="1000" once>
+      <h2 class="q-mb-sm text-grad-mint q-py-xs">{{ header }}</h2>
+    </q-intersection>
+
+    <q-intersection transition="slide-right" :transition-duration="1000" once>
+      <h5 class="q-mt-sm q-mb-xl text-white">{{ subHeader }}</h5>
+    </q-intersection>
+
     <q-img :src="img" class="absolute-bottom" />
   </div>
 </template>

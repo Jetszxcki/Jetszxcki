@@ -5,7 +5,7 @@
     <div v-if="$route.path === '/blogs/arts'">
       <BlogCategoryHeader
         header="Art Blogs"
-        img="/blogs/arts/arts-home.svg"
+        img="blogs/arts/arts-home.svg"
       />
 
       <div class="row q-col-gutter-md q-pa-lg">
@@ -14,8 +14,8 @@
             header="The Art of Mimicry: A Unique Skill Through Imitation"
             img="arts/the-art-of-mimicry/chameleon.svg"
             to="arts/the-art-of-mimicry"
-            :date="new Date()"
-            :duration="2"
+            :date="new Date('June 13, 2022')"
+            :duration="3"
             horizontal
           />
         </div>
