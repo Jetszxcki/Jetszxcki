@@ -47,7 +47,7 @@
           :key="index"
           @click="clickAction(source.action)"
           :icon="source.icon"
-          color="grad-mint"
+          color="mint"
           size="lg"
           flat
           round
