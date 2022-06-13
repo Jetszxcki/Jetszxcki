@@ -12,13 +12,15 @@
     <div class="q-pa-xl bg-navy-blue-1 text-center relative-position">
       <q-img
         class="blog-header-bg-img absolute-bottom"
-        :src="`/blogs/${bgImg}`"
+        :src="`blogs/${bgImg}`"
       />
 
       <div class="relative-position">
-        <h2 class="font-akshar text-grad-mint q-py-xs q-mb-none hyphen-word-wrap">
-          {{ header }}
-        </h2>
+        <q-intersection transition="slide-down" :transition-duration="1000" once>
+          <h2 class="font-akshar text-grad-mint q-py-xs q-mb-none hyphen-word-wrap">
+            {{ header }}
+          </h2>
+        </q-intersection>
 
         <div class="font-pangolin text-faded-grey-2">
           <h4 class="q-mb-sm">

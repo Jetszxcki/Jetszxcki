@@ -4,7 +4,7 @@
       id="blogs"
       header="My Blogs"
       sub-header="Categorized for your convenience"
-      img="/blogs/room-desk.svg"
+      img="blogs/room-desk.svg"
     />
 
     <div class="q-pa-lg">

@@ -41,7 +41,7 @@
       <div class="col-12 col-md-8">
         <q-img
           :src="`${mainImgPath}/github-ss.png`"
-          class="shadow-24 br-20"
+          class="shadow-24 br-20 transition-zoom-1-1"
         />
       </div>
     </div>
@@ -63,7 +63,7 @@
       <div class="col-12 col-md-8">
         <q-img
           :src="`${mainImgPath}/duolingo-ss.png`"
-          class="shadow-24 br-20"
+          class="shadow-24 br-20 transition-zoom-1-1"
         />
       </div>
     </div>
