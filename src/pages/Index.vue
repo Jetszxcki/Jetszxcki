@@ -203,10 +203,10 @@
 
           <q-intersection transition="slide-up" :transition-duration="1000" once>
             <h6 class="text-faded-grey-2">
-              Whether at work or simply at home, I tend to keep things organized and clean.
+              Whether at work or simply at home, I tend to keep things clean and organized.
               <span class="text-white">
-                Just like there are shelves for books and closets for clothes, 
-                program and project files also needs a home for safety.
+                Just like how I tidy up my books and clothes inside shelves and closets, 
+                I also know how to provide a home for my code and project files.
               </span>
             </h6>
             </q-intersection>
