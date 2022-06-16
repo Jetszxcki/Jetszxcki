@@ -73,7 +73,7 @@
           <h6 class="text-white q-mb-none q-mt-md">
             Having it heard from a video game, the French accent sparked my interest towards language learning.
             Currently at my 8th month of study, I can fairly speak and understand French,
-            while alternately learning it together with Japanese.
+            while slowly learning Russian.
           </h6>
         </div>
 
@@ -376,8 +376,8 @@ export default {
             image: 'france.svg'
           },
           {
-            language: '日本語',
-            image: 'japan.svg'
+            language: 'русский',
+            image: 'russia.svg'
           }
         ]
       ],
