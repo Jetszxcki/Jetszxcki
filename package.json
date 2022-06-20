@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Jet's personal website",
   "productName": "Jet Albano",
+  "productDescription": "Below is my website showcasing my experiences as a programmer/developer. Also contains information of me, as a person --- hobbies, favorite snacks and more! This is still under development, but is already viable for publicity! Will continuously update this for design, blog and more content updates!",
   "author": "Jet Albano <skyjeth1371120@gmail.com>",
   "private": true,
   "scripts": {
