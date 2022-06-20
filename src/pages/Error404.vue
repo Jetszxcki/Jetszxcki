@@ -56,11 +56,23 @@
 
 <script>
 import Container from 'components/Container'
+import { useMeta } from 'quasar'
 
 export default {
   name: "Error404",
   components: {
     Container,
+  },
+  mounted () {
+    useMeta(() => {
+      return {
+        title: 'Page Not Found',
+        keywords: {
+          name: 'keywords',
+          content: '404 page'
+        }
+      }
+    })
   }
 }
 </script>

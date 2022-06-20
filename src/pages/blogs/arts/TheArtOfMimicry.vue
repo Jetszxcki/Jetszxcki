@@ -18,8 +18,8 @@
     </h6>
 
     <h6>
-      One good example of what the art of mimicry upholds (creating websites is an art too),
-      is this website itself.
+      One good example of what the art of mimicry upholds,
+      is this website itself (creating websites is an art too).
       <!-- TODO: link the parenthesized text to a blog "Softwares as an art" -->
       You may have not noticed it, but this website was inspired from two known websites:
     </h6>
@@ -41,7 +41,7 @@
       <div class="col-12 col-md-8 q-mt-md">
         <q-img
           :src="`${mainImgPath}/github-ss.png`"
-          class="shadow-5 br-20 transition-zoom-1-1"
+          class="br-20 ss"
         />
       </div>
     </div>
@@ -63,7 +63,7 @@
       <div class="col-12 col-md-8 q-mt-md">
         <q-img
           :src="`${mainImgPath}/duolingo-ss.png`"
-          class="shadow-5 br-20 transition-zoom-1-1"
+          class="br-20 ss"
         />
       </div>
     </div>
@@ -102,14 +102,14 @@
       after reaching fluency, or even at the start. On the contrary, I found it easy, sounding like a native,
       thanks to this skill. Deep in me thinks that maybe this skill
       lead me to language learning, copying something that I find beautiful or interesting --- pretty
-      much how I started French after hearing their accent from a video game. Another part of me thinks
+      much how I started French after hearing their accent from a video game. However, another part of me thinks
       this is linked to my personality, being an empath easily connecting to the perspective of others.
     </h6>
 
     <h6>
-      Again, imitating doesn't always imply lack of originality, otherwise, movie and voice actors
+      Imitating doesn't always imply lack of originality, otherwise, movie and voice actors
       would have disgraceful jobs. It is simply a skill of creating unique things from a mixture of components
-      --- <b>like how a coffee is made using beans, sugar, water and milk.</b>
+      --- <b>like how a coffee is made from beans, sugar, water and milk.</b>
     </h6>
   </Blog>
 </template>
@@ -130,3 +130,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.ss {
+  border: 1px solid #ccc;
+}
+</style>

@@ -26,3 +26,21 @@
     />
   </div>
 </template>
+
+<script>
+import { useMeta } from 'quasar'
+
+export default {
+  mounted () {
+    useMeta(() => {
+      return {
+        title: 'Coming Soon',
+        keywords: {
+          name: 'keywords',
+          content: 'coming soon page'
+        }
+      }
+    })
+  }
+}
+</script>
