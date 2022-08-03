@@ -18,7 +18,6 @@
             icon="mdi-chevron-up"
             color="grad-mint"
             text-color="navy-blue"
-            class="shadow-10"
           />
         </q-intersection>
       </q-page-scroller>

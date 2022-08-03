@@ -146,10 +146,10 @@ export default {
       }
     },
     openTab (tab) {
-      if (!tab.name === 'Contacts') {
+      if (tab.name !== 'Contacts') {
         const path = tab.path
         if (this.$route.path === path) {
-          smoothScrollTo(path.substring(1), document)
+          smoothScrollTo('home', document)
         } else {
           this.$router.push(path)
         }
@@ -158,12 +158,6 @@ export default {
     openContact (contact) {
       if (contact.name === 'Gmail') {
         copy(contact.url)
-      } else if (contact.name === 'Home') {
-        if (this.$route.path === '/') {
-          smoothScrollTo('home', document)
-        } else {
-          this.$router.push('/')
-        }
       } else {
         window.open(contact.url, '_blank')
       }

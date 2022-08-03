@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <Container id="home" class="q-pt-xl bg-navy-blue-1">
+    <Container id="home" class="q-pt-xl bg-navy-blue-1" container-class="home-bg">
       <q-intersection transition="slide-down" :transition-duration="1000" once>
         <div class="row flex-center">
           <h6 class="text-mint q-mb-none font-pangolin">
@@ -72,7 +72,7 @@
           </h5>
           <h6 class="text-white q-mb-none q-mt-md">
             Having it heard from a video game, the French accent sparked my interest towards language learning.
-            Currently at my 8th month of study, I can fairly speak and understand French,
+            Currently at my 10th month of study, I can fairly speak and understand French,
             while slowly learning Russian.
           </h6>
         </div>

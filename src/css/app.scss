@@ -265,6 +265,12 @@ h1, h2, h3 {
   width: 250px;
 }
 
+.home-bg {
+  background-image: url('../../public/space.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 // DEV TESTING CSS (borders for testing layouts, dimensions, margins, paddings testing)
 
 .b3-blue {
